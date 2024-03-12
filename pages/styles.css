@@ -1,0 +1,78 @@
+@font-face{
+    font-family:'Commissioner';
+    src:url(../assets/fonts/Commissioner-Light.woff2) format('woff2');
+    font-weight:300;
+    font-size:normal;
+    font-display: wrap;
+}
+@font-face{
+    font-family: 'Commissioner';
+    src:url(../assets/fonts/Commissioner-ExtraLight.woff2) format('woff2');
+    font-weight: 200;
+    font-size:normal;
+    font-display: wrap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root{
+    --color-dark:#000000;
+    --color-primary-blue:#0074D9;
+
+    --border-radius:4px;
+
+    --font-family-base:'Commissioner',sans-serif;
+
+    --input-height: 54px;
+
+    --container-width:1084px;
+    --container-padding-x: 15px;
+
+    --transition-duration:0.2s;
+}
