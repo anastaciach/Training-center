@@ -62,8 +62,10 @@
     font-display: swap;
 }
 :root{
-    --color-dark:#000000;
+    --color-light:#ffffff;
+
     --color-primary-blue:#0074D9;
+    --color-secondary:#3f3f3f;
 
     --border-radius:4px;
 
@@ -71,8 +73,22 @@
 
     --input-height: 54px;
 
-    --container-width:1084px;
-    --container-padding-x: 15px;
+    --container-width-small:1084px;
+    --container-width:1450px;
+    --container-padding-x: 235px;
 
     --transition-duration:0.2s;
+}
+body{
+    font-family:var(--font-family-base);
+    font-weight: 400;
+    background-color:var(--color-light);
+}
+.container{
+    max-width:calc(var(--container-width)+var(--container-padding-x)*2);
+    margin-inline:auto;
+    padding-inline:var(--container-padding-x);
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
 }
