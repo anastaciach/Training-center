@@ -66,6 +66,7 @@
 
     --color-primary-blue:#0074D9;
     --color-secondary:#3f3f3f;
+    --color-button:#FF7F00;
 
     --border-radius:4px;
 
@@ -92,7 +93,7 @@ a {
   }
 .container{
     max-width:calc(var(--container-width)+var(--container-padding-x)*2);
-    margin-inline:auto;
+   /* margin-inline:auto;*//* Из-за него все съезжает????????*/
     padding-inline:var(--container-padding-x);
 }
 h1,h2,h3,h4,h5,h6{
@@ -101,20 +102,20 @@ h1,h2,h3,h4,h5,h6{
 .header__menu{
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   /* justify-content: center;*/
+   /* align-items: center;*/
     column-gap: 20px;
     font-size: 0.875rem;
     color:#ffffff;
 }
-.header__menu-addit,.header__menu-info{
+.header__menu-addit,.header__menu-info,.header__menu-main{
     display:flex;
     column-gap:20px;
 
 }
 .header__menu-item{
     display: flex;
-    justify-content: start;
+    /*justify-content: start;*/
     align-items:center;
     gap: 14px;
 }
@@ -155,3 +156,22 @@ h1,h2,h3,h4,h5,h6{
     color:#3f3f3f;
     gap: 2px;
 }
+.button{
+ border-radius: 4px;
+ border: none;
+ width: 120px;
+ height: 30px;
+ background: var(--color-button);
+ color:#ffffff;
+ font-size: 14px;
+}
+/*шапка3: меню,обучение,медицина*/
+.header__menu-main>li>a>div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:5px;
+    color:#3f3f3f;
+
+}
+/*конец шапка3*/
