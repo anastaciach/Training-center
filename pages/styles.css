@@ -107,16 +107,51 @@ h1,h2,h3,h4,h5,h6{
     font-size: 0.875rem;
     color:#ffffff;
 }
+.header__menu-addit,.header__menu-info{
+    display:flex;
+    column-gap:20px;
+
+}
 .header__menu-item{
     display: flex;
     justify-content: start;
     align-items:center;
     gap: 14px;
 }
-.header__menu-addit{
+
+.menu-addit__background{
     background-color:#3f3f3f;
     width: 100vw;
+}
+.search__container{
     display:flex;
-    column-gap:40px;
+    align-items:center;
+    border: 1px solid #3f3f3f;
+    border-radius: .25rem;
 
+}
+.search__input{
+    flex:1;
+    border:none;
+    outline:none;
+    background-color: transparent;
+    padding-right: 75px;
+    font-size: 16px;
+}
+.search__container .search-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #666;
+}
+.header__menu-contact-list{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.contact-list__item a{
+    display: flex;
+    color:#3f3f3f;
+    gap: 2px;
 }

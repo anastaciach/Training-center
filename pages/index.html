@@ -10,7 +10,7 @@
 <body>
 <header class="header ">
     <nav class="header__menu">
-        <ul class="header__menu-addit container">
+        <ul class="header__menu-addit container menu-addit__background">
             <li class="header__menu-item">
                 <img src="../assets/icons/gps.svg" alt="gps-icon" class="gps-icon">
                 <a href="" class="header__menu-link">Красноярск</a>
@@ -27,19 +27,26 @@
                 <a href="" class="header__menu-link">Версия для слабовидящих</a>
             </li>
         </ul>
-        <ul class="header__menu-info">
+        <ul class="header__menu-info container">
             <li class="header__menu-item">
                 <a href="/" class="header__menu-link">
                     <img src="../assets/svg/лого.svg" alt="qualification-logo" class="header__menu-logo" loading="lazy">
                 </a>
             </li>
             <li class="header__menu-item">
-                <div  class="header__menu-search"></div>
+                <div  class="search__container">
+                    <input class="search__input" placeholder="Поиск по сайту"/>
+                    <button class="search-btn">
+                        <img src="../assets/icons/search.svg" alt="search-icon">
+                    </button>
+                </div>
             </li>
             <li class="header__menu-item">
                 <div class="header__menu-contact-list">
-                    <div class="contact-list__item-phone">8 (800) 775-20-45</div>
-                    <div class="contact-list__item-email">nmo124@mail.ru</div>
+                    <div class="contact-list__item phone">
+                        <a href="tel:88007752045"><img src="../assets/icons/phone_icon.svg" alt="" class="phone-icon">8 (800) 775-20-45 </a>
+                    </div>
+                    <div class="contact-list__item email"> <a href="mailto:nmo124@mail.ru"><img src="../assets/icons/email_icon.svg" alt="" class="email-icon">nmo124@mail.ru</a></div>
                 </div>
             </li>
             <li class="header__menu-item"><button class="header__menu-button" >Обратная связь</button></li>
