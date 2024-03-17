@@ -93,7 +93,7 @@ a {
   }
 .container{
     max-width:calc(var(--container-width)+var(--container-padding-x)*2);
-   /* margin-inline:auto;*//* Из-за него все съезжает????????*/
+    margin-inline:auto;
     padding-inline:var(--container-padding-x);
 }
 h1,h2,h3,h4,h5,h6{
@@ -111,6 +111,8 @@ h1,h2,h3,h4,h5,h6{
 .header__menu-addit,.header__menu-info,.header__menu-main{
     display:flex;
     column-gap:20px;
+    justify-content: flex-tart;
+    
 
 }
 .header__menu-item{
@@ -119,11 +121,15 @@ h1,h2,h3,h4,h5,h6{
     align-items:center;
     gap: 14px;
 }
-
+.header__menu-info{
+    padding: 10px 10px;
+    border-bottom: 1px solid #bababa;
+}
 .menu-addit__background{
     background-color:#3f3f3f;
     width: 100vw;
 }
+
 .search__container{
     display:flex;
     align-items:center;
@@ -166,6 +172,10 @@ h1,h2,h3,h4,h5,h6{
  font-size: 14px;
 }
 /*шапка3: меню,обучение,медицина*/
+.header__menu-main{
+    padding:10px 10px;
+    padding-right: 450px;
+}
 .header__menu-main>li>a>div{
     display: flex;
     align-items: center;
@@ -174,4 +184,6 @@ h1,h2,h3,h4,h5,h6{
     color:#3f3f3f;
 
 }
+
+
 /*конец шапка3*/
