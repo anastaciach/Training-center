@@ -297,4 +297,30 @@ position: relative;
 }
 /*конец стилей слайдера*/
 /*Начало стилей блока описание*/
+.description__advantages{
+    display:grid;
+    gap:0px;
+    justify-items: center;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr,1fr,1fr;
+   /* align-items: center;*/
+}
+
+.advantages-lists__item{
+
+}
+.advantages-context{
+
+}
+.advantages-context::before{
+  content: '';
+  background: url(../assets/icons/plus_icon.svg) no-repeat center ;
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+
+}
+.advantages-context__title{}
+.advantages-context__subtitle{}
 /*Конец стилей блока описание*/
