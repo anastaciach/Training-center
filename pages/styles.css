@@ -75,6 +75,7 @@
     --input-height: 54px;
 
     --container-width-small:1084px;
+    --container-width-aside:px;
     --container-width:1450px;
     --container-padding-x: 235px;
 
@@ -84,6 +85,9 @@ body{
     font-family:var(--font-family-base);
     font-weight: 400;
     background-color:var(--color-light);
+}
+main{
+    display: flex;
 }
 a {
     text-decoration: none;
@@ -99,6 +103,10 @@ a {
 h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
+.wrapper-section{
+    display: flex;
+    flex-direction: column;
+}
 .header__menu{
     display:flex;
     flex-direction: column;
@@ -111,8 +119,7 @@ h1,h2,h3,h4,h5,h6{
 .header__menu-addit,.header__menu-info,.header__menu-main{
     display:flex;
     column-gap:20px;
-    justify-content: flex-tart;
-    
+
 
 }
 .header__menu-item{
@@ -121,9 +128,11 @@ h1,h2,h3,h4,h5,h6{
     align-items:center;
     gap: 14px;
 }
+.header__menu-main .header__menu-item:last-child{
+    margin-left: auto;
+}
 .header__menu-info{
     padding: 10px 10px;
-    border-bottom: 1px solid #bababa;
 }
 .menu-addit__background{
     background-color:#3f3f3f;
@@ -173,17 +182,119 @@ h1,h2,h3,h4,h5,h6{
 }
 /*шапка3: меню,обучение,медицина*/
 .header__menu-main{
-    padding:10px 10px;
-    padding-right: 450px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.menu-main__background{
+    background-color: #0074D9;
+    width: 100vw;
 }
 .header__menu-main>li>a>div{
     display: flex;
     align-items: center;
     justify-content: start;
     gap:5px;
-    color:#3f3f3f;
+    color:#ffffff;
 
 }
-
-
 /*конец шапка3*/
+.main-wrapper{
+    display:flex;
+}
+
+/*начало стилей слайдера*/
+.slider{
+    max-width:var(--container-width-small);
+}
+.slider__items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*transition: all 1s;*/
+}
+
+.slider__item{
+    width: 1076px;
+    height: 360px;
+}
+.slider__button-prev{
+    position:absolute;
+    left:1%;
+    top:50%;
+    border:none;
+}
+.slider__button-next{
+    position:absolute;
+    right:2%;
+    top:50%;
+    border:none;
+}
+.slider__background-image{
+    max-width:600px;
+    max-height: 250px;
+    background: #f332f2;
+    background: url(../assets/images/slider-background_1.png) no-repeat center center / cover;
+    background-clip: border-box;
+    /*overflow: hidden;*/
+}
+.slider__content {
+    margin-left: 20px;
+    top: 14px;
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+
+.slider__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 233, 233, 0.9);
+
+    box-sizing: border-box;
+}
+.slider__title{
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    left:20px;
+}
+.slider__title>h3{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 127%;
+
+}
+.slider__subtitle{
+    position: relative;
+    z-index: 1;
+    left:20px;
+}
+.slider__button{
+    position: relative;
+    bottom:0%;
+    left:20px;
+    z-index: 1;
+}
+.slider-wrapper__dots{
+position: relative;
+}
+.slider__dots{
+    display:flex;
+    column-gap: 10px;
+    position: absolute;
+    left: 20%;
+    top:-20px;
+}
+.slider__dot{
+    width:16px;
+    height: 16px;
+    border:1px solid #3f3f3f;
+}
+/*конец стилей слайдера*/
+/*Начало стилей блока описание*/
+/*Конец стилей блока описание*/
