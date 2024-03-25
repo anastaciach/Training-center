@@ -85,9 +85,12 @@ body{
     font-family:var(--font-family-base);
     font-weight: 400;
     background-color:var(--color-light);
+   
 }
+
 main{
     display: flex;
+
 }
 a {
     text-decoration: none;
@@ -136,7 +139,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu-addit__background{
     background-color:#3f3f3f;
-    width: 100vw;
+    width: 100%;
 }
 
 .search__container{
@@ -188,7 +191,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu-main__background{
     background-color: #0074D9;
-    width: 100vw;
+    width: 100%;
 }
 .header__menu-main>li>a>div{
     display: flex;
@@ -313,7 +316,6 @@ position: relative;
     content: '';
     position: absolute;
     left:0;
-
     width: 50px;
     height: 50px;
     background: url(../assets/icons/plus_icon.svg) no-repeat center;
@@ -332,3 +334,23 @@ position: relative;
     margin: 0;
 }
 /*Конец стилей блока описание*/
+/*Начало стилей блока направления*/
+.directions{
+}
+.directions__header{}
+.directions-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.directions-item{
+    width:180px;
+    height: 200px;
+    background: var(--color-primary-blue) no-repeat center;
+    margin:10px;
+}
+.directions-context{}
+.directions-training__list,.directions-events__list,.directions-medicine__list{
+    
+}
+/*Конец стилей блока направления*/
