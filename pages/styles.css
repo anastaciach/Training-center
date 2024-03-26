@@ -77,7 +77,7 @@
     --container-width-small:1084px;
     --container-width-aside:px;
     --container-width:1450px;
-    --container-padding-x: 235px;
+    --container-padding-x: 200px;/*235px было*/
 
     --transition-duration:0.2s;
 }
@@ -335,22 +335,63 @@ position: relative;
 }
 /*Конец стилей блока описание*/
 /*Начало стилей блока направления*/
-.directions{
-}
-.directions__header{}
-.directions-list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.directions-item{
-    width:180px;
-    height: 200px;
-    background: var(--color-primary-blue) no-repeat center;
-    margin:10px;
-}
-.directions-context{}
-.directions-training__list,.directions-events__list,.directions-medicine__list{
-    
-}
+    .directions{
+    }
+    .directions__header{}
+    .directions-list{
+        display:grid;
+        gap:20px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+        grid-template-columns:repeat(3,1fr);/*repeat(auto-fit, minmax(50px, 1fr))*/
+        justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
+    }
+    .directions-item{
+        min-width:230px;
+        width:auto;
+        height: 200px;
+        background: var(--color-primary-blue) no-repeat center;
+        flex-wrap: wrap;
+        padding: 5px; /* добавляем отступы внутри элемента */
+        text-align: start; /* центрируем текст по центру */
+        margin-bottom: 10px;
+    }
+    .directions-context{}
+    .directions-training__list,.directions-events__list,.directions-medicine__list{
+
+    }
 /*Конец стилей блока направления*/
+
+/*Начало стилей блока области(направления) обучения*/
+.field-study{
+
+}
+.field-study__lists{
+    display:grid;
+    gap:20px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+    grid-template-columns:repeat(3,1fr);/*repeat(auto-fit, minmax(50px, 1fr))*/
+    justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
+    
+
+}
+.field-study__item {
+    display: grid;
+    place-items: center;
+    min-width:200px;
+    width: auto; /* изменяем ширину на автоматическую */
+    height: auto; /* изменяем высоту на автоматическую */
+    flex-wrap: wrap;
+    padding: 5px; /* добавляем отступы внутри элемента */
+    text-align: center; /* центрируем текст по центру */
+
+}
+.field-study__item p {
+    width: 100%; /* ширина текста */
+    height: auto; /* автоматическая высота текста */
+    word-wrap: break-word; /* перенос слов */
+    margin: 0; /* убираем отступы у текста */
+    padding: 5px; /* добавляем отступы у текста */
+}
+.fs__item-background{
+    background: var(--color-primary-blue) no-repeat center;
+}
+
+/**Конец стилей блока области(направления) обучения*/
