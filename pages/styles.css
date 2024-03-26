@@ -353,6 +353,7 @@ position: relative;
         padding: 5px; /* добавляем отступы внутри элемента */
         text-align: start; /* центрируем текст по центру */
         margin-bottom: 10px;
+        color:white;
     }
     .directions-context{}
     .directions-training__list,.directions-events__list,.directions-medicine__list{
@@ -366,7 +367,7 @@ position: relative;
 }
 .field-study__lists{
     display:grid;
-    gap:20px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+    gap:10px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
     grid-template-columns:repeat(3,1fr);/*repeat(auto-fit, minmax(50px, 1fr))*/
     justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
     
@@ -376,22 +377,29 @@ position: relative;
     display: grid;
     place-items: center;
     min-width:200px;
-    width: auto; /* изменяем ширину на автоматическую */
-    height: auto; /* изменяем высоту на автоматическую */
+    width: auto;
+    height: auto;
     flex-wrap: wrap;
-    padding: 5px; /* добавляем отступы внутри элемента */
-    text-align: center; /* центрируем текст по центру */
+    padding: 5px;
+    text-align: center;
 
 }
 .field-study__item p {
-    width: 100%; /* ширина текста */
-    height: auto; /* автоматическая высота текста */
+    width: 100%;
+    height: auto;
     word-wrap: break-word; /* перенос слов */
-    margin: 0; /* убираем отступы у текста */
-    padding: 5px; /* добавляем отступы у текста */
+    margin: 0;
+    padding: 5px;
 }
 .fs__item-background{
-    background: var(--color-primary-blue) no-repeat center;
+    /*background: var(--color-primary-blue) no-repeat center;*/
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
 }
 
 /**Конец стилей блока области(направления) обучения*/
+/*Начало стилей блока FAQ*/
+.FAQ__header{}
+.FAQ_lists{}
+.FAQ_item{}
+/*Конец стилей блока FAQ*/
