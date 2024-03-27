@@ -400,6 +400,37 @@ position: relative;
 /**Конец стилей блока области(направления) обучения*/
 /*Начало стилей блока FAQ*/
 .FAQ__header{}
-.FAQ_lists{}
-.FAQ_item{}
+.FAQ_lists{
+
+}
+.FAQ_item{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    min-width: 800px;
+}
+.item__question>h4{
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+
+}
+.item__answer{
+    display: none;
+}
+.FAQ_item::before{
+    content:'';
+    background: url(../assets/icons/question_icon.svg) no-repeat center;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+.FAQ_item::after{
+    content:'';
+    background: url(../assets/icons/bottom_icon.svg) no-repeat center;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
 /*Конец стилей блока FAQ*/
