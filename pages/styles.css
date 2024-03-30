@@ -401,12 +401,20 @@ position: relative;
 /*Начало стилей блока FAQ*/
 .FAQ__header{}
 .FAQ_lists{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 
 }
 .FAQ_item{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    min-width: 800px;
+    grid-template-columns:repeat(3,1fr);
+    align-items: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.2);
+}
+.item__question{
+width: 610px;
 }
 .item__question>h4{
   width: auto;
@@ -423,14 +431,38 @@ position: relative;
     background: url(../assets/icons/question_icon.svg) no-repeat center;
     height: 50px;
     width: 50px;
-    display: block;
+
 }
 .FAQ_item::after{
     content:'';
     background: url(../assets/icons/bottom_icon.svg) no-repeat center;
     height: 50px;
     width: 50px;
-    display: block;
+}
+.FAQ__buttons{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:150px;
+}
+.FAQ__button-ask,
+.FAQ__button-more {
+    width: 250px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Размер шрифта (опционально) */
 }
 
+.FAQ__button-ask {
+    color:#3f3f3f;
+    background-color: #fff;
+    border: 2px solid orange;
+    box-sizing: border-box;
+}
+
+.FAQ__button-more{
+
+}
 /*Конец стилей блока FAQ*/
