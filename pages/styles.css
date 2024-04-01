@@ -533,12 +533,15 @@ width: 610px;
 .form{
 color:#fff;
 padding:30px 0;
+
 }
 .form__body{
     background-color:var(--color-primary-blue);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: var(--color-button) 4px solid;
+
 }
 .form__contact-info{
     padding: 25px 30px 40px 23px;
