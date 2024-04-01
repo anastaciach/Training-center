@@ -533,7 +533,6 @@ width: 610px;
 .form{
 color:#fff;
 padding:30px 0;
-
 }
 .form__body{
     background-color:var(--color-primary-blue);
@@ -585,3 +584,11 @@ gap:10px;
     width:100%;
 }
 /*Конец стилей блока Форма*/
+/*Начало стилей блока Карта*/
+.map__body{
+    background:url(../assets/images/map.png) center no-repeat;
+    width:auto;
+    height: 400px;
+    margin-bottom: 100px;
+}
+/*Конец стилей блока Карта*/
