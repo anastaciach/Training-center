@@ -67,7 +67,7 @@
     --color-primary-blue:#0074D9;
     --color-secondary:#3f3f3f;
     --color-button:#FF7F00;
-
+    --color-footer:#F0F0F0;
     --border-radius:4px;
 
     --font-family-base:'Commissioner',sans-serif;
@@ -81,11 +81,12 @@
 
     --transition-duration:0.2s;
 }
+
 body{
     font-family:var(--font-family-base);
     font-weight: 400;
     background-color:var(--color-light);
-   
+
 }
 
 main{
@@ -106,6 +107,11 @@ a {
 h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
+.logo{
+    background:url(../assets/svg/лого.svg) center/contain no-repeat;
+    display: block;
+    }
+
 .wrapper-section{
     display: flex;
     flex-direction: column;
@@ -122,8 +128,6 @@ h1,h2,h3,h4,h5,h6{
 .header__menu-addit,.header__menu-info,.header__menu-main{
     display:flex;
     column-gap:20px;
-
-
 }
 .header__menu-item{
     display: flex;
@@ -141,13 +145,15 @@ h1,h2,h3,h4,h5,h6{
     background-color:#3f3f3f;
     width: 100%;
 }
-
+.header__menu-logo{
+    width: 250px;
+    height: 40px;
+}
 .search__container{
     display:flex;
     align-items:center;
     border: 1px solid #3f3f3f;
     border-radius: .25rem;
-
 }
 .search__input{
     flex:1;
@@ -592,3 +598,62 @@ gap:10px;
     margin-bottom: 100px;
 }
 /*Конец стилей блока Карта*/
+/*Начало стилей блока Footer*/
+footer{
+    background: var(--color-footer);
+}
+.footer__body{
+    display: flex;
+   /* column-gap: 40px;*/
+}
+.footer__section{
+    display: flex;
+    width:230px;
+    flex-direction: column;
+}
+.footer__title{
+    font-size: 16px;
+    padding-top: 30px;
+}
+
+
+.footer__contacts{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.footer__contacts-network span:not(:last-child){
+    margin-right: 5px; 
+}
+.footer__bottom{
+    text-align: center;
+}
+.footer__section-qualification>.logo{
+    width: 200px;
+    height: 40px;
+}
+.contacts__whatsapp::before{
+content: "";
+display: inline-block;
+height: 25px;
+width: 25px;
+background: url(../assets/icons/whatsapp_icon.svg) center no-repeat;
+}
+.contacts__vk::before{
+content: "";
+display: inline-block;
+height: 25px;
+width: 25px;
+background: url(../assets/icons/vk_icon.svg) center no-repeat;
+}
+.contacts__youtube::before{
+    content: "";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: url(../assets/icons/youTube_icon.svg) center no-repeat;
+}
+.footer__bottom>a{
+    border-bottom: var(--color-secondary) 1px solid;
+}
+/*Конец стилей блока Footer*/
