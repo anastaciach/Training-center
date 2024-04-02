@@ -135,7 +135,7 @@
     --container-width-small:1084px;
     --container-width-aside:px;
     --container-width:1450px;
-    --container-padding-x: 180px;/*235px было*//*200px ideal*/
+    --container-padding-x: 150px;/*235px было*//*200px ideal*/
 
     --transition-duration:0.2s;
 }
@@ -174,6 +174,24 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: column;
 }
+.gps-icon::before{
+    content:'';
+    width: 12px;
+    height: 13px;
+    background: url(../assets/icons/gps.svg) center/cover no-repeat;
+}
+.caret-icon::after{
+    content:'';
+    width: 8px;
+    height: 6px;
+    background: url(../assets/icons/caret_bottom.svg) center/cover no-repeat;
+}
+.eye-icon::after{
+    content:'';
+    width: 15px;
+    height: 12px;
+    background: url(../assets/icons/eye.svg) center/cover no-repeat;
+}
 .header__menu{
     display:flex;
     flex-direction: column;
@@ -193,7 +211,7 @@ h1,h2,h3,h4,h5,h6{
     align-items:center;
     gap: 14px;
 }
-.header__menu-main .header__menu-item:last-child{
+ .header__menu-item:last-child{
     margin-left: auto;
 }
 .header__menu-info{
@@ -204,13 +222,13 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
 }
 .header__menu-logo{
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
 }
 .search__container{
     display:flex;
     align-items:center;
-    border: 1px solid #3f3f3f;
+    border: 1px solid #c6c5c5;
     border-radius: .25rem;
 }
 .search__input{
@@ -218,15 +236,22 @@ h1,h2,h3,h4,h5,h6{
     border:none;
     outline:none;
     background-color: transparent;
-    padding-right: 75px;
-    font-size: 16px;
+    width:300px;
+    font-size: 12px;
 }
 .search__container .search-btn{
   background-color: transparent;
   border: none;
   outline: none;
   padding: 5px;
-  color: #666;
+  color: #929292;
+}
+.search-btn::after{
+    content:'';
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url(../assets/icons/search.svg) center/cover no-repeat;
 }
 .header__menu-contact-list{
     display: flex;
@@ -247,6 +272,24 @@ h1,h2,h3,h4,h5,h6{
  color:#ffffff;
  font-size: 14px;
 }
+.header__menu-button{
+    width: 142px;
+    height: 40px;
+}
+.phone__icon::before{
+    content:'';
+    display: block;
+    width: 17px;
+    height: 20px;
+    background: url(../assets/icons/phone_icon.svg) center/cover no-repeat;
+}
+.email__icon::before{
+    content:'';
+    display: block;
+    width: 18px;
+    height: 15px;
+    background: url(../assets/icons/email_icon.svg) center/cover no-repeat;
+}
 /*шапка3: меню,обучение,медицина*/
 .header__menu-main{
     padding-top: 10px;
@@ -264,6 +307,13 @@ h1,h2,h3,h4,h5,h6{
     gap:5px;
     color:#ffffff;
 
+}
+.header__menu-burger::before{
+    content:'';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../assets/icons/burger-menu_icon.svg) center/contain no-repeat;
 }
 /*конец шапка3*/
 .main-wrapper{
