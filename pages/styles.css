@@ -513,7 +513,7 @@ position: relative;
     font-size: 14px;
     font-weight: 600;
     width: 100%;
-    min-width: 200px;
+    min-width: 180px;
     white-space: normal; /* Разрешаем перенос на новую строку */
     overflow-wrap: break-word; 
 }
@@ -538,7 +538,7 @@ position: relative;
     .directions-item{
         min-width:230px;
         width:auto;
-        height: 200px;
+        height: 220px;
         background: var(--color-primary-blue) no-repeat center;
         flex-wrap: wrap;
         padding: 5px; /* добавляем отступы внутри элемента */
@@ -548,9 +548,6 @@ position: relative;
     }
     .directions-context{
         margin-left: 20px;
-    }
-    .directions-medicine__list h4{
-        font-weight: 500;
     }
     .directions-medicine__title::before{
         content: "";
@@ -618,6 +615,9 @@ position: relative;
 
 /**Конец стилей блока области(направления) обучения*/
 /*Начало стилей блока FAQ*/
+.FAQ__accordion{
+    margin-bottom: 20px;
+}
 .FAQ__header{}
 .FAQ_lists{
     display: flex;
@@ -626,22 +626,20 @@ position: relative;
 
 }
 .FAQ_item{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+    display:flex;
     align-items: center;
+    position: relative;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: rgba(255, 255, 255, 0.2);
 }
 .item__question{
-width: 610px;
+    max-width: 800px;
 }
 .item__question>h4{
-  width: auto;
-  min-height: 30px;
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
-
+  padding-right: 50px;
 }
 .item__answer{
     display: none;
@@ -658,6 +656,12 @@ width: 610px;
     background: url(../assets/icons/bottom_icon.svg) no-repeat center;
     height: 50px;
     width: 50px;
+    position: absolute;
+    top: 50%; /* Положение вертикально посередине */
+    right: 20px; /* Увеличиваем расстояние справа */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+
+    color: #000; /* Цвет иконки */
 }
 .FAQ__buttons{
     display: flex;
@@ -672,7 +676,6 @@ width: 610px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; /* Размер шрифта (опционально) */
 }
 
 .FAQ__button-ask {
@@ -696,27 +699,40 @@ width: 610px;
 }
 .review__item{
     padding: 20px;
-    background-color: #f5f5f5;
+    background: #f5f5f5 ;
     border-radius: 5px;
+    position: relative;
 }
 .reviews__trigger{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f5f5f5;
+    position: relative;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #f7f7f7;
+}
+.review__date {
+    position: absolute;
+    right: 20px;
 }
 .reviews__title{
-    position: relative;
-    padding: 0 60px 0 60px;
+    margin: 0 20px 0 10px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.reviews__button{
+    font-size: 12px;
+    margin-bottom: 40px;
 }
 .reviews__title::before{
-    content:""; 
+    content:"";
     display:block ;
     background: url(../assets/icons/pencil_icon.svg) no-repeat center;
     height: 50px;
     width: 50px;
-    position: absolute;
-    left:0;
+
 }
 .review__header{
     display: flex;
@@ -726,9 +742,10 @@ width: 610px;
 }
 .review__user{
     display: flex;
-    gap:20px;
-
+    gap:10px;
 }
+
+
 .review__rating{
     margin-bottom: 10px;
 }
