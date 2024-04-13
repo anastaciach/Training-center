@@ -160,6 +160,7 @@ main{
     display: flex;
 
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -170,9 +171,12 @@ a {
     margin-bottom: 25px;
   }
 .container{
-    max-width:calc(var(--container-width)+var(--container-padding-x)*2);
+   /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+    max-width: var(--container-width);
     margin-inline:auto;
     padding-inline:var(--container-padding-x);
+
+
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: 500;
@@ -801,8 +805,10 @@ padding:30px 0;
 .form__item{
 display: flex;
 flex-direction: column;
+align-items: center;
 gap:10px;
 }
+
 .form__label{
     font-size:18px;
     display: block;
@@ -813,12 +819,16 @@ gap:10px;
     padding: 0 20px;
     border-radius: 4px;
     width: 100%;
-    font-size: 18px;
+    font-size: 14px;
     border: 1px solid #ccc; /* серая обводка */
 }
 .form__button{
     text-align: center;
     width:100%;
+}
+.form__checkbox{
+    font-size: 10px;
+    line-height: 1.5;
 }
 /*Конец стилей блока Форма*/
 /*Начало стилей блока Карта*/
@@ -831,32 +841,31 @@ gap:10px;
 /*Начало стилей блока Footer*/
 footer{
     background: var(--color-footer);
+    font-size: 13px;
+    padding-bottom: 40px;
 }
 .footer__body{
     display: flex;
-    column-gap: 40px;
+    column-gap: 20px;
+    padding-bottom: 50px;
 }
 .footer__section{
     display: flex;
     flex-direction: column;
 }
 .footer__title{
-    font-size: 16px;
+    font-size: 14px;
     padding-top: 30px;
 }
-
-
 .footer__contacts{
     display: flex;
     flex-direction: column;
     gap:5px;
 }
 .footer__contacts-network span:not(:last-child){
-    margin-right: 5px; 
+    margin-right: 5px;
 }
-.footer__bottom{
-    text-align: center;
-}
+
 .footer__section-qualification>.logo{
     margin-top: 20px;
     width: 200px;
@@ -883,7 +892,14 @@ background: url(../assets/icons/vk_icon.svg) center no-repeat;
     width: 25px;
     background: url(../assets/icons/youTube_icon.svg) center no-repeat;
 }
-.footer__bottom>a{
+
+.footer__bottom{
+    text-align: center;
+
+}
+
+.footer__bottom a{
     border-bottom: var(--color-secondary) 1px solid;
 }
+
 /*Конец стилей блока Footer*/
