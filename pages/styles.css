@@ -861,23 +861,51 @@ min-width: 200px;
 font-size: 10px;
 font-weight: 600;
 }
-.side-panel__side-menu{}
-.side-panel__list{
+.side-panel__side-menu{
+    margin-bottom: 20px;
+}
+.side-menu__list{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
-.side-panel__item{
+.side-menu__item{
     display: flex;
     align-items: center;
+    /* margin-left: 25px; */
 }
-.side-panel__item::before{
+.side-menu__item::before{
     content:'';
     display: inline-block;
     width:25px;
     height: 25px;
     background:url(../assets/icons/arrow_icon.svg) center no-repeat;
+}
+.side-panel__banner{
+    background:url(../assets/images/cat.png)no-repeat center center / cover;
+    width:220px;
+    height:145px;
+    color:white;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.side-panel__banner-title h1{
+    padding: 10px 5px 5px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    height: 10px;
+}
+.side-panel__banner-subtitle p{
+    font-weight: 400;
+    font-size: 10px;
+    padding: 10px;
+
+}
+.side-panel__banner-footer{
+    margin-top: auto;
+    padding: 10px;
 }
 /*Конец стилей блока Боковая панель*/
 
