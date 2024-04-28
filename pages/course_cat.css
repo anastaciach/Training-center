@@ -1,0 +1,15 @@
+.catalog{}
+.catalog__search{
+}
+.search__container{
+    display: flex;
+}
+.catalog__filter{}
+.filter__container{
+    display: flex;
+}
+.filter__education-type{}
+.filter__title{}
+.filter__target-audience{}
+.filter__education-format{}
+.filter__controls{}
