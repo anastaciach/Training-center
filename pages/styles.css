@@ -976,7 +976,40 @@ background: url(../assets/icons/vk_icon.svg) center no-repeat;
 /*Конец стилей блока Footer*/
 
 /* НАЧАЛО стили для страницы education-program-catalog*/
-.education-programs__list{}
-.
+.education-programs__list{
+    display:grid;
+    gap:10px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+    grid-template-columns:repeat(2,1fr);/*repeat(auto-fit, minmax(50px, 1fr))*/
+    justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
+}
+.education-program__item{
+width: 400px;
+height: 100;
+border: 1px solid #ccc;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+background: #fff;
+padding:15px 25px 15px 25px;
+}
+
+.program__title{
+    margin-bottom: 10px;
+}
+.program__info{
+display: flex;
+justify-content: space-between;
+}
+.program__learning-mode,.program__hours,.program__price{
+    display: flex;
+    align-items:center ;
+    gap:10px;
+    margin:  10px 0 0 0;
+}
+.program__hours{}
+.program__price{}
+.program__button{
+    margin:  5px 0 0 0;
+    background-color: var(--color-primary-blue);
+}
+
 
 /* Конец  стили для страницы education-program-catalog*/
