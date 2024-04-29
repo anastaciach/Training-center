@@ -1049,13 +1049,30 @@ opacity: 0.5;
 }
 /*Конец блока стилей education-direction*/
 /*Начало блока стилей education__docs-confirmation */
-
-/*Конец блока стилей education__docs-confirmation*/
 .education__docs-confirmation{}
 .docs-confirmation__description{}
 .docs-confirmation__text{}
 .docs-confirmation__image-block{}
 .docs-confirmation__image-caption{}
 .docs-confirmation__delivery-info{}
+/*Конец блока стилей education__docs-confirmation*/
+/**/
+.course-advantages__list{
+    display:grid;
+    gap:10px 10px;
+    grid-template-columns:repeat(2,1fr);
+    justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
+}
+.course-advantages__item{
+    display: flex;
+}
+.course-advantages__item:before{
+    content: "";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: url(../assets/icons/check_mark_icon.svg) center no-repeat;
+}
+/**/
 
 /* Конец  стили для страницы education-program-catalog*/
