@@ -976,6 +976,8 @@ background: url(../assets/icons/vk_icon.svg) center no-repeat;
 /*Конец стилей блока Footer*/
 
 /* НАЧАЛО стили для страницы education-program-catalog*/
+/*Начало блока стилей education-direction*/
+
 .education-programs__list{
     display:grid;
     gap:10px 10px;/* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
@@ -1010,6 +1012,50 @@ justify-content: space-between;
     margin:  5px 0 0 0;
     background-color: var(--color-primary-blue);
 }
+.education-direction__learning-steps{}
+.education-direction__list-steps{
+    display:grid;
+    gap:10px 10px;
+    grid-template-columns:repeat(4,1fr);
+    justify-content: stretch;/*выравнивание по горизонтали по умолчанию*/
+}
+.direction-list__item{
+    padding:10px;
+    width: 240px;
+    min-height: 225px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    position: relative;
+}
+.direction__item-title{
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+.direction__item-description{
+    font-size: 14px;
+}
+.direction__item-step{
+position: absolute;
+bottom: 20px;
+color:#0074D9;
+font-weight: 600;
+font-size: 56px;
+opacity: 0.5;
+}
+/*Конец блока стилей education-direction*/
+/*Начало блока стилей education__docs-confirmation */
 
+/*Конец блока стилей education__docs-confirmation*/
+.education__docs-confirmation{}
+.docs-confirmation__description{}
+.docs-confirmation__text{}
+.docs-confirmation__image-block{}
+.docs-confirmation__image-caption{}
+.docs-confirmation__delivery-info{}
 
 /* Конец  стили для страницы education-program-catalog*/
