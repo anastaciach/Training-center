@@ -1,398 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Квалификация</title>
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-<header class="header ">
-    <nav class="header__menu">
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__menu">
         <div class="menu-addit__background">
-            <ul class="container header__menu-addit ">
-                <li class="header__menu-item gps-icon">
-                    <a href="" class="header__menu-link">Красноярск</a>
-                </li>
-                <li class="header__menu-item caret-icon">
-                    <a href="" class="header__menu-link">О компании</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link">Получить кп</a>
-                </li>
-                <li class="header__menu-item eye-icon">
-                    <a href="" class="header__menu-link">Версия для слабовидящих</a>
-                </li>
-            </ul>
-    </div>
-        <ul class="container header__menu-info">
-            <li class="header__menu-item">
-                <a href="/" class="header__menu-link"><div class="header__menu-logo logo"></div></a>
+          <ul class="container header__menu-addit">
+            <li class="header__menu-item gps-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.25 5.83301C12.25 9.91634 7 13.4163 7 13.4163C7 13.4163 1.75 9.91634 1.75 5.83301C1.75 4.44062 2.30312 3.10526 3.28769 2.1207C4.27226 1.13613 5.60761 0.583008 7 0.583008C8.39239 0.583008 9.72774 1.13613 10.7123 2.1207C11.6969 3.10526 12.25 4.44062 12.25 5.83301Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 7.58301C7.9665 7.58301 8.75 6.79951 8.75 5.83301C8.75 4.86651 7.9665 4.08301 7 4.08301C6.0335 4.08301 5.25 4.86651 5.25 5.83301C5.25 6.79951 6.0335 7.58301 7 7.58301Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+              <a href="" class="header__menu-link">Красноярск</a>
+            </li>
+            <li class="header__menu-item caret-icon">
+              <a href="" class="header__menu-link">О компании</a>
+              <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.648438L4.0015 6.34344L0 0.648438H8Z" fill="white"/>
+                </svg>
+                
             </li>
             <li class="header__menu-item">
-                <div  class="search__container">
-                    <input class="search__input" placeholder="Поиск по сайту"/>
-                    <button class="search-btn"></button>
-                </div>
+              <a href="" class="header__menu-link">Получить кп</a>
             </li>
-            <li class="header__menu-item">
-                <div class="header__menu-contact-list">
-                    <div class="contact-list__item ">
-                        <a href="tel:88007752045" class="phone__icon">8 (800) 775-20-45 </a>
-                    </div>
-                    <div class="contact-list__item"> <a href="mailto:nmo124@mail.ru" class="email__icon">nmo124@mail.ru</a></div>
-                </div>
+            <li class="header__menu-item eye-icon">
+              <a href="" class="header__menu-link">Версия для слабовидящих</a>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.54363 8.49888C9.54363 9.56403 8.62873 10.4275 7.50007 10.4275C6.37149 10.4275 5.45654 9.56403 5.45654 8.49888C5.45654 7.43373 6.37149 6.57031 7.50007 6.57031C8.62873 6.57031 9.54363 7.43373 9.54363 8.49888Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.50001 4C4.4499 4 1.86802 5.89185 1 8.5C1.86801 11.1081 4.4499 13 7.50001 13C10.5501 13 13.132 11.1081 14 8.5C13.132 5.89187 10.5501 4 7.50001 4Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
             </li>
-            <li class="header__menu-item">
-                <button class="header__menu-button button" >Обратная связь</button>
-            </li>
-        </ul>
-        <div class="menu-main__background">
-            <ul class="container header__menu-main">
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link header__menu-burger">
-                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="5.14844" width="16" height="2" fill="white"/>
-                            <rect x="4" y="11.1484" width="16" height="2" fill="white"/>
-                            <rect x="4" y="17.1484" width="16" height="2" fill="white"/>
-                        </svg>
-                        Меню
-                    </a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link ">
-                        <svg width="23" height="22" viewBox="0 0 23 22" fill="white" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.7052 19.1531L21.7347 15.5311L21.7347 15.5309L21.7346 15.5306L18.823 4.66429L17.8524 1.04194C17.7556 0.681874 17.5198 0.374935 17.1969 0.18852C16.874 0.00210518 16.4903 -0.0485482 16.1301 0.0476821L12.5079 1.01825C12.357 1.05896 12.2139 1.12454 12.0846 1.21232C11.9797 0.952458 11.7996 0.729826 11.5674 0.572926C11.3352 0.416027 11.0615 0.332002 10.7812 0.33161H7.03125C6.68482 0.33172 6.35076 0.460376 6.09375 0.692665C5.83674 0.460376 5.50268 0.33172 5.15625 0.33161H1.40625C1.03342 0.332027 0.675974 0.480319 0.412341 0.743951C0.148709 1.00758 0.000416563 1.36503 0 1.73786V20.4879C0.000416563 20.8607 0.148709 21.2181 0.412341 21.4818C0.675974 21.7454 1.03342 21.8937 1.40625 21.8941H5.15625C5.50268 21.894 5.83674 21.7653 6.09375 21.533C6.35076 21.7653 6.68482 21.894 7.03125 21.8941H10.7812C11.1541 21.8937 11.5115 21.7454 11.7752 21.4818C12.0388 21.2181 12.1871 20.8607 12.1875 20.4879V5.25583L12.484 6.36252L12.4841 6.36264L12.4841 6.36279L15.3958 17.2292V17.2294L15.3959 17.2296L16.3664 20.8516C16.414 21.03 16.4964 21.1973 16.6088 21.3439C16.7212 21.4905 16.8614 21.6135 17.0213 21.7059C17.1813 21.7982 17.3579 21.8581 17.541 21.8822C17.7242 21.9062 17.9103 21.8939 18.0886 21.8459L21.7109 20.8754C21.8893 20.8276 22.0565 20.7451 22.203 20.6327C22.3495 20.5203 22.4724 20.3801 22.5648 20.2202C22.6571 20.0603 22.717 19.8837 22.7411 19.7006C22.7652 19.5175 22.753 19.3315 22.7052 19.1531ZM13.5109 6.57276L18.0387 5.35959L20.7078 15.3208L16.1801 16.534L13.5109 6.57276ZM7.03125 1.26911H10.7812C10.9055 1.26924 11.0247 1.31867 11.1126 1.40655C11.2004 1.49443 11.2499 1.61358 11.25 1.73786V16.2691H6.5625V1.73786C6.56263 1.61358 6.61206 1.49443 6.69994 1.40655C6.78782 1.31867 6.90697 1.26924 7.03125 1.26911ZM1.40625 1.26911H5.15625C5.28053 1.26924 5.39968 1.31867 5.48756 1.40655C5.57544 1.49443 5.62487 1.61358 5.625 1.73786V5.01911H0.9375V1.73786C0.937632 1.61358 0.987061 1.49443 1.07494 1.40655C1.16282 1.31867 1.28197 1.26924 1.40625 1.26911ZM5.15625 20.9566H1.40625C1.28197 20.9565 1.16282 20.907 1.07494 20.8192C0.987061 20.7313 0.937632 20.6121 0.9375 20.4879V5.95661H5.625V20.4879C5.62487 20.6121 5.57544 20.7313 5.48756 20.8192C5.39968 20.907 5.28053 20.9565 5.15625 20.9566ZM10.7812 20.9566H7.03125C6.90697 20.9565 6.78782 20.907 6.69994 20.8192C6.61206 20.7313 6.56263 20.6121 6.5625 20.4879V17.2066H11.25V20.4879C11.2499 20.6121 11.2004 20.7313 11.1126 20.8192C11.0247 20.907 10.9055 20.9565 10.7812 20.9566ZM12.4659 2.14218C12.4965 2.08876 12.5375 2.04194 12.5863 2.00444C12.6352 1.96694 12.691 1.9395 12.7505 1.92371L16.3727 0.953139C16.4322 0.937177 16.4942 0.933089 16.5552 0.941109C16.6163 0.949129 16.6751 0.969099 16.7284 0.999878C16.7818 1.03066 16.8285 1.07164 16.866 1.12049C16.9034 1.16934 16.9309 1.22509 16.9468 1.28456L17.7961 4.45411L13.2683 5.66729L12.4191 2.49786C12.403 2.43843 12.3988 2.37638 12.4068 2.31533C12.4149 2.25428 12.4349 2.19542 12.4659 2.14218ZM21.7529 19.7514C21.7222 19.8049 21.6813 19.8517 21.6324 19.8892C21.5835 19.9267 21.5277 19.9541 21.4682 19.9699L17.846 20.9405C17.7259 20.9724 17.5981 20.9554 17.4905 20.8932C17.3829 20.8311 17.3043 20.7289 17.2719 20.6089L16.4227 17.4395L20.9504 16.2262L21.7997 19.3958C21.8158 19.4552 21.82 19.5172 21.8119 19.5783C21.8039 19.6393 21.7838 19.6982 21.7529 19.7514Z" fill="white"/>
-                            </svg>
-                        Обучение
-                    </a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link header__menu-medicine">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 0C11.1642 0 11.5 0.33579 11.5 0.75V1.00143C11.6112 1.00311 11.7061 1.00675 11.7946 1.01458C13.6048 1.17465 15.0396 2.60953 15.1997 4.41968C15.2143 4.58512 15.2143 4.77256 15.2143 5.04785V6.271C15.2143 10.1403 12.2702 13.3219 8.50001 13.6981V15.7501C8.50001 18.0973 10.4028 20.0001 12.75 20.0001H13.6324C14.8825 20.0001 15.9747 19.3184 16.5557 18.3058C15.0702 17.8071 14 16.4035 14 14.75C14 12.6789 15.6789 11 17.75 11C19.8211 11 21.5 12.6789 21.5 14.75C21.5 16.6905 20.0261 18.2867 18.1368 18.4803C17.4092 20.2518 15.6674 21.5001 13.6324 21.5001H12.75C9.5744 21.5001 7.00001 18.9257 7.00001 15.7501V13.6995C3.0717 13.3222 1.2669e-05 10.0125 1.2669e-05 5.98529L2.65545e-06 5.04791C-2.73445e-05 4.77259 -4.73335e-05 4.58514 0.0145827 4.41968C0.174653 2.60953 1.60954 1.17465 3.41969 1.01458C3.57536 1.00081 3.75051 1.00002 4.00001 0.99999V0.75C4.00001 0.33579 4.33579 0 4.75001 0C5.16422 0 5.50001 0.33579 5.50001 0.75V2.75C5.50001 3.16421 5.16422 3.5 4.75001 3.5C4.33579 3.5 4.00001 3.16421 4.00001 2.75V2.50002C3.7366 2.5002 3.63393 2.50148 3.55181 2.50875C2.46573 2.60479 1.60479 3.46572 1.50875 4.55181C1.50074 4.6424 1.50001 4.75802 1.50001 5.0869V5.98529C1.50001 9.4371 4.29823 12.2353 7.75001 12.2353C11.044 12.2353 13.7143 9.565 13.7143 6.271V5.0869C13.7143 4.75802 13.7136 4.6424 13.7055 4.55181C13.6095 3.46572 12.7486 2.60479 11.6625 2.50875C11.6202 2.505 11.5724 2.50285 11.5 2.50162V2.75C11.5 3.16421 11.1642 3.5 10.75 3.5C10.3358 3.5 10 3.16421 10 2.75V0.75C10 0.33579 10.3358 0 10.75 0ZM15.5 14.75C15.5 13.5074 16.5074 12.5 17.75 12.5C18.9926 12.5 20 13.5074 20 14.75C20 15.9926 18.9926 17 17.75 17C16.5074 17 15.5 15.9926 15.5 14.75Z" fill="white"/>
-                            </svg>
-                        Медицина
-                    </a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link header__menu-events">
-                        <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 6C4 3.23858 6.23858 1 9 1C11.7614 1 14 3.23858 14 6V9C14 11.7614 11.7614 14 9 14C6.23858 14 4 11.7614 4 9V6Z" stroke="white" stroke-width="1.5"/>
-                            <path d="M10 9H14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M10 6H14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M9 17V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M17.75 8C17.75 7.58579 17.4142 7.25 17 7.25C16.5858 7.25 16.25 7.58579 16.25 8H17.75ZM1.75 8C1.75 7.58579 1.41421 7.25 1 7.25C0.58579 7.25 0.25 7.58579 0.25 8H1.75ZM12.5121 15.3442C12.1499 15.5452 12.0192 16.0017 12.2202 16.3639C12.4212 16.7261 12.8777 16.8568 13.2399 16.6558L12.5121 15.3442ZM16.25 8V9H17.75V8H16.25ZM1.75 9V8H0.25V9H1.75ZM9 16.25C4.99594 16.25 1.75 13.0041 1.75 9H0.25C0.25 13.8325 4.16751 17.75 9 17.75V16.25ZM16.25 9C16.25 11.7287 14.7429 14.1063 12.5121 15.3442L13.2399 16.6558C15.928 15.1642 17.75 12.2954 17.75 9H16.25Z" fill="white"/>
-                        </svg>
-                        Мероприятия
-                    </a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="" class="header__menu-link header__menu-account">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.00014 9.73465C11.3736 9.73465 13.2976 7.81059 13.2976 5.43715C13.2976 3.0637 11.3736 1.13965 9.00014 1.13965C6.62669 1.13965 4.70264 3.0637 4.70264 5.43715C4.70264 7.81059 6.62669 9.73465 9.00014 9.73465Z" stroke="white" stroke-width="1.91" stroke-miterlimit="10"/>
-                            <path d="M1.125 17.61L1.4025 16.0725C1.73032 14.2969 2.6698 12.6921 4.05773 11.5371C5.44566 10.3821 7.19434 9.74979 9 9.75C10.8078 9.75044 12.5582 10.3849 13.9464 11.5429C15.3347 12.7009 16.2728 14.3091 16.5975 16.0875L16.875 17.625" stroke="white" stroke-width="1.91" stroke-miterlimit="10"/>
-                        </svg>
-                        Личный кабинет
-                    </a>
-                </li>
-            </ul>
+          </ul>
         </div>
-
-    </nav>
-</header>
-<main>
-    <div class="main-wrapper container">
-        <div class="wrapper-section">
-            <div class="slider">
-                <div class="slider__items">
-                    <div class=" slider__item slider__background-image">
-                        <div class="slider__content">
-                            <div class="slider__title">Приглашаем на очное обучение по транспортным направлениям!</div>
-                            <div class="slider__subtitle">Набираем группу на обучение по программам: Водитель погрузчика, БДД, Техминимум для водителей, Стропальщик и т.д.</div>
-                            <button class="button slider__button">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider__button-prev"></button>
-                <button class="slider__button-next"></button>
-                <div class="slider-wrapper__dots">
-                    <div class="slider__dots">
-                        <div class="slider__dot"></div>
-                        <div class="slider__dot"></div>
-                        <div class="slider__dot"></div>
-                    </div>
-
+        <div class="menu-info__background"><ul class="container header__menu-info">
+          <li class="header__menu-item">
+            <a href="/" class="header__menu-link"
+              ><span class="header__menu-logo logo"></span
+            ></a>
+          </li>
+          <li class="header__menu-item">
+            <div class="search__container">
+              <input class="search__input" placeholder="Поиск по сайту" />
+              <button class="search-btn"></button>
             </div>
-         </div>
-         <div class="description">
-                <div class="description__title">
-                    <h1>Учебный центр  «Квалификация»</h1>
+          </li>
+          <li class="header__menu-item">
+            <div class="header__menu-contact-list">
+              <div class="contact-list__item">
+                <a href="tel:88007752045" class="phone__icon"
+                  >8 (800) 775-20-45
+                </a>
+              </div>
+              <div class="contact-list__item">
+                <a href="mailto:nmo124@mail.ru" class="email__icon"
+                  >nmo124@mail.ru</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="header__menu-item">
+            <button class="header__menu-button button">Обратная связь</button>
+          </li>
+        </ul></div>
+        <div class="menu-main__background">
+          <ul class="container header__menu-main">
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link header__menu-burger">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="4" y="5.14844" width="16" height="2" fill="white" />
+                  <rect x="4" y="11.1484" width="16" height="2" fill="white" />
+                  <rect x="4" y="17.1484" width="16" height="2" fill="white" />
+                </svg>
+                Меню
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.7052 19.1531L21.7347 15.5311L21.7347 15.5309L21.7346 15.5306L18.823 4.66429L17.8524 1.04194C17.7556 0.681874 17.5198 0.374935 17.1969 0.18852C16.874 0.00210518 16.4903 -0.0485482 16.1301 0.0476821L12.5079 1.01825C12.357 1.05896 12.2139 1.12454 12.0846 1.21232C11.9797 0.952458 11.7996 0.729826 11.5674 0.572926C11.3352 0.416027 11.0615 0.332002 10.7812 0.33161H7.03125C6.68482 0.33172 6.35076 0.460376 6.09375 0.692665C5.83674 0.460376 5.50268 0.33172 5.15625 0.33161H1.40625C1.03342 0.332027 0.675974 0.480319 0.412341 0.743951C0.148709 1.00758 0.000416563 1.36503 0 1.73786V20.4879C0.000416563 20.8607 0.148709 21.2181 0.412341 21.4818C0.675974 21.7454 1.03342 21.8937 1.40625 21.8941H5.15625C5.50268 21.894 5.83674 21.7653 6.09375 21.533C6.35076 21.7653 6.68482 21.894 7.03125 21.8941H10.7812C11.1541 21.8937 11.5115 21.7454 11.7752 21.4818C12.0388 21.2181 12.1871 20.8607 12.1875 20.4879V5.25583L12.484 6.36252L12.4841 6.36264L12.4841 6.36279L15.3958 17.2292V17.2294L15.3959 17.2296L16.3664 20.8516C16.414 21.03 16.4964 21.1973 16.6088 21.3439C16.7212 21.4905 16.8614 21.6135 17.0213 21.7059C17.1813 21.7982 17.3579 21.8581 17.541 21.8822C17.7242 21.9062 17.9103 21.8939 18.0886 21.8459L21.7109 20.8754C21.8893 20.8276 22.0565 20.7451 22.203 20.6327C22.3495 20.5203 22.4724 20.3801 22.5648 20.2202C22.6571 20.0603 22.717 19.8837 22.7411 19.7006C22.7652 19.5175 22.753 19.3315 22.7052 19.1531ZM13.5109 6.57276L18.0387 5.35959L20.7078 15.3208L16.1801 16.534L13.5109 6.57276ZM7.03125 1.26911H10.7812C10.9055 1.26924 11.0247 1.31867 11.1126 1.40655C11.2004 1.49443 11.2499 1.61358 11.25 1.73786V16.2691H6.5625V1.73786C6.56263 1.61358 6.61206 1.49443 6.69994 1.40655C6.78782 1.31867 6.90697 1.26924 7.03125 1.26911ZM1.40625 1.26911H5.15625C5.28053 1.26924 5.39968 1.31867 5.48756 1.40655C5.57544 1.49443 5.62487 1.61358 5.625 1.73786V5.01911H0.9375V1.73786C0.937632 1.61358 0.987061 1.49443 1.07494 1.40655C1.16282 1.31867 1.28197 1.26924 1.40625 1.26911ZM5.15625 20.9566H1.40625C1.28197 20.9565 1.16282 20.907 1.07494 20.8192C0.987061 20.7313 0.937632 20.6121 0.9375 20.4879V5.95661H5.625V20.4879C5.62487 20.6121 5.57544 20.7313 5.48756 20.8192C5.39968 20.907 5.28053 20.9565 5.15625 20.9566ZM10.7812 20.9566H7.03125C6.90697 20.9565 6.78782 20.907 6.69994 20.8192C6.61206 20.7313 6.56263 20.6121 6.5625 20.4879V17.2066H11.25V20.4879C11.2499 20.6121 11.2004 20.7313 11.1126 20.8192C11.0247 20.907 10.9055 20.9565 10.7812 20.9566ZM12.4659 2.14218C12.4965 2.08876 12.5375 2.04194 12.5863 2.00444C12.6352 1.96694 12.691 1.9395 12.7505 1.92371L16.3727 0.953139C16.4322 0.937177 16.4942 0.933089 16.5552 0.941109C16.6163 0.949129 16.6751 0.969099 16.7284 0.999878C16.7818 1.03066 16.8285 1.07164 16.866 1.12049C16.9034 1.16934 16.9309 1.22509 16.9468 1.28456L17.7961 4.45411L13.2683 5.66729L12.4191 2.49786C12.403 2.43843 12.3988 2.37638 12.4068 2.31533C12.4149 2.25428 12.4349 2.19542 12.4659 2.14218ZM21.7529 19.7514C21.7222 19.8049 21.6813 19.8517 21.6324 19.8892C21.5835 19.9267 21.5277 19.9541 21.4682 19.9699L17.846 20.9405C17.7259 20.9724 17.5981 20.9554 17.4905 20.8932C17.3829 20.8311 17.3043 20.7289 17.2719 20.6089L16.4227 17.4395L20.9504 16.2262L21.7997 19.3958C21.8158 19.4552 21.82 19.5172 21.8119 19.5783C21.8039 19.6393 21.7838 19.6982 21.7529 19.7514Z"
+                    fill="white"
+                  />
+                </svg>
+                Обучение
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link header__menu-medicine">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.75 0C11.1642 0 11.5 0.33579 11.5 0.75V1.00143C11.6112 1.00311 11.7061 1.00675 11.7946 1.01458C13.6048 1.17465 15.0396 2.60953 15.1997 4.41968C15.2143 4.58512 15.2143 4.77256 15.2143 5.04785V6.271C15.2143 10.1403 12.2702 13.3219 8.50001 13.6981V15.7501C8.50001 18.0973 10.4028 20.0001 12.75 20.0001H13.6324C14.8825 20.0001 15.9747 19.3184 16.5557 18.3058C15.0702 17.8071 14 16.4035 14 14.75C14 12.6789 15.6789 11 17.75 11C19.8211 11 21.5 12.6789 21.5 14.75C21.5 16.6905 20.0261 18.2867 18.1368 18.4803C17.4092 20.2518 15.6674 21.5001 13.6324 21.5001H12.75C9.5744 21.5001 7.00001 18.9257 7.00001 15.7501V13.6995C3.0717 13.3222 1.2669e-05 10.0125 1.2669e-05 5.98529L2.65545e-06 5.04791C-2.73445e-05 4.77259 -4.73335e-05 4.58514 0.0145827 4.41968C0.174653 2.60953 1.60954 1.17465 3.41969 1.01458C3.57536 1.00081 3.75051 1.00002 4.00001 0.99999V0.75C4.00001 0.33579 4.33579 0 4.75001 0C5.16422 0 5.50001 0.33579 5.50001 0.75V2.75C5.50001 3.16421 5.16422 3.5 4.75001 3.5C4.33579 3.5 4.00001 3.16421 4.00001 2.75V2.50002C3.7366 2.5002 3.63393 2.50148 3.55181 2.50875C2.46573 2.60479 1.60479 3.46572 1.50875 4.55181C1.50074 4.6424 1.50001 4.75802 1.50001 5.0869V5.98529C1.50001 9.4371 4.29823 12.2353 7.75001 12.2353C11.044 12.2353 13.7143 9.565 13.7143 6.271V5.0869C13.7143 4.75802 13.7136 4.6424 13.7055 4.55181C13.6095 3.46572 12.7486 2.60479 11.6625 2.50875C11.6202 2.505 11.5724 2.50285 11.5 2.50162V2.75C11.5 3.16421 11.1642 3.5 10.75 3.5C10.3358 3.5 10 3.16421 10 2.75V0.75C10 0.33579 10.3358 0 10.75 0ZM15.5 14.75C15.5 13.5074 16.5074 12.5 17.75 12.5C18.9926 12.5 20 13.5074 20 14.75C20 15.9926 18.9926 17 17.75 17C16.5074 17 15.5 15.9926 15.5 14.75Z"
+                    fill="white"
+                  />
+                </svg>
+                Медицина
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link header__menu-events">
+                <svg
+                  width="18"
+                  height="21"
+                  viewBox="0 0 18 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6C4 3.23858 6.23858 1 9 1C11.7614 1 14 3.23858 14 6V9C14 11.7614 11.7614 14 9 14C6.23858 14 4 11.7614 4 9V6Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M10 9H14"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10 6H14"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M9 17V20"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17.75 8C17.75 7.58579 17.4142 7.25 17 7.25C16.5858 7.25 16.25 7.58579 16.25 8H17.75ZM1.75 8C1.75 7.58579 1.41421 7.25 1 7.25C0.58579 7.25 0.25 7.58579 0.25 8H1.75ZM12.5121 15.3442C12.1499 15.5452 12.0192 16.0017 12.2202 16.3639C12.4212 16.7261 12.8777 16.8568 13.2399 16.6558L12.5121 15.3442ZM16.25 8V9H17.75V8H16.25ZM1.75 9V8H0.25V9H1.75ZM9 16.25C4.99594 16.25 1.75 13.0041 1.75 9H0.25C0.25 13.8325 4.16751 17.75 9 17.75V16.25ZM16.25 9C16.25 11.7287 14.7429 14.1063 12.5121 15.3442L13.2399 16.6558C15.928 15.1642 17.75 12.2954 17.75 9H16.25Z"
+                    fill="white"
+                  />
+                </svg>
+                Мероприятия
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a href="" class="header__menu-link header__menu-account">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.00014 9.73465C11.3736 9.73465 13.2976 7.81059 13.2976 5.43715C13.2976 3.0637 11.3736 1.13965 9.00014 1.13965C6.62669 1.13965 4.70264 3.0637 4.70264 5.43715C4.70264 7.81059 6.62669 9.73465 9.00014 9.73465Z"
+                    stroke="white"
+                    stroke-width="1.91"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M1.125 17.61L1.4025 16.0725C1.73032 14.2969 2.6698 12.6921 4.05773 11.5371C5.44566 10.3821 7.19434 9.74979 9 9.75C10.8078 9.75044 12.5582 10.3849 13.9464 11.5429C15.3347 12.7009 16.2728 14.3091 16.5975 16.0875L16.875 17.625"
+                    stroke="white"
+                    stroke-width="1.91"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper container">
+        <div class="wrapper-section">
+          <div class="slider">
+            <div class="slider__items">
+              <div class="slider__item slider__background-image">
+                <div class="slider__content">
+                  <div class="slider__title">
+                    Приглашаем на очное обучение по транспортным направлениям!
+                  </div>
+                  <div class="slider__subtitle">
+                    Набираем группу на обучение по программам: Водитель
+                    погрузчика, БДД, Техминимум для водителей, Стропальщик и
+                    т.д.
+                  </div>
+                  <button class="button slider__button">Подробнее</button>
                 </div>
-                <div class="description__subtitle"><p>Учебный центр оказывает услуги дополнительного профессионального образования и профессионального обучения для медицинских работников. Предлагая вам свои услуги, мы берем на себя
-                    важное обязательство — создать полноценные условия для результативного, экономичного и комфортного
-                    развития вашей компетентности.</p></div>
-                <div class="description__advantages">
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов</h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов </h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов</h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов</h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов</h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешноОколо 97% учеников сдают экзамен успешноОколо 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                        <div class="advantages-lists__item">
-                            <div class="advantages-context">
-                                <div class="advantages-context__title"><h3>Успешные сдачи экзаменов</h3></div>
-                                <div class="advantages-context__subtitle"><p>Около 97% учеников сдают экзамен успешно</p></div>
-                            </div>
-                        </div>
-                    
+              </div>
+            </div>
+            <button class="slider__button-prev"></button>
+            <button class="slider__button-next"></button>
+            <div class="slider-wrapper__dots">
+              <div class="slider__dots">
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="description__title">
+              <h1>Учебный центр «Квалификация»</h1>
+            </div>
+            <div class="description__subtitle">
+              <p>
+                Учебный центр оказывает услуги дополнительного профессионального
+                образования и профессионального обучения для медицинских
+                работников. Предлагая вам свои услуги, мы берем на себя важное
+                обязательство — создать полноценные условия для результативного,
+                экономичного и комфортного развития вашей компетентности.
+              </p>
+            </div>
+            <div class="description__advantages">
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>Около 97% учеников сдают экзамен успешно</p>
+                  </div>
                 </div>
-         </div>
-         <div class="directions">
+              </div>
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>Около 97% учеников сдают экзамен успешно</p>
+                  </div>
+                </div>
+              </div>
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>Около 97% учеников сдают экзамен успешно</p>
+                  </div>
+                </div>
+              </div>
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>Около 97% учеников сдают экзамен успешно</p>
+                  </div>
+                </div>
+              </div>
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>
+                      Около 97% учеников сдают экзамен успешноОколо 97% учеников
+                      сдают экзамен успешноОколо 97% учеников сдают экзамен
+                      успешно
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="advantages-lists__item">
+                <div class="advantages-context">
+                  <div class="advantages-context__title">
+                    <h3>Успешные сдачи экзаменов</h3>
+                  </div>
+                  <div class="advantages-context__subtitle">
+                    <p>Около 97% учеников сдают экзамен успешно</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="directions">
             <div class="directions__header"><h2>Направления обучения</h2></div>
             <div class="directions-list">
-                <div class="directions-item">
-                    <div class="directions-context">
-                       <div class="directions-medicine__title"><h3>Медицина</h3></div>
-                       <ul class="directions-medicine__list">
-                        <li><a href=""><h4>Программы для врачей</h4></a></li>
-                        <li><a href=""><h4>Программы для среднего медицинского персонала</h4></a></li>
-                       </ul>
-                    </div>
+              <div class="directions-item">
+                <div class="directions-context">
+                  <div class="directions-medicine__title">
+                    <h3>Медицина</h3>
+                  </div>
+                  <ul class="directions-medicine__list">
+                    <li>
+                      <a href=""><h4>Программы для врачей</h4></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><h4>
+                          Программы для среднего медицинского персонала
+                        </h4></a
+                      >
+                    </li>
+                  </ul>
                 </div>
-                <div class="directions-item">
-                    <div class="directions-context">
-                       <div class="directions-training__title"><h3>Обучение</h3>
-                       </div>
-                       <ul class="directions-training__list">
-                        <li><a href=""><h4>Повышение квалификации</h4></a></li>
-                        <li><a href=""><h4>Профессиональная переподготовка</h4></a></li>
-                       </ul>
-                    </div>
+              </div>
+              <div class="directions-item">
+                <div class="directions-context">
+                  <div class="directions-training__title">
+                    <h3>Обучение</h3>
+                  </div>
+                  <ul class="directions-training__list">
+                    <li>
+                      <a href=""><h4>Повышение квалификации</h4></a>
+                    </li>
+                    <li>
+                      <a href=""><h4>Профессиональная переподготовка</h4></a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="directions-item">
-                    <div class="directions-context">
-                       <div class="directions-events__title"><h3>Мероприятия</h3>
-                       </div>
-                       <ul class="directions-events__list">
-                        <li><a href=""><h4>Корпоративное обучение</h4></a></li>
-                        <li><a href=""><h4>Семинары</h4></a></li>
-                        <li><a href=""><h4>Вебинары</h4></a></li>
-                       </ul>
-                    </div>
+              </div>
+              <div class="directions-item">
+                <div class="directions-context">
+                  <div class="directions-events__title">
+                    <h3>Мероприятия</h3>
+                  </div>
+                  <ul class="directions-events__list">
+                    <li>
+                      <a href=""><h4>Корпоративное обучение</h4></a>
+                    </li>
+                    <li>
+                      <a href=""><h4>Семинары</h4></a>
+                    </li>
+                    <li>
+                      <a href=""><h4>Вебинары</h4></a>
+                    </li>
+                  </ul>
                 </div>
-             </div>
+              </div>
             </div>
-            <div class="field-study">
-                    <ul class="field-study__lists">
-                        <li class="field-study__item fs__item-background"><p>Педагогика</p></li>
-                        <li class="field-study__item fs__item-background"><p>Экологическая безопасность</p></li>
-                        <li class="field-study__item fs__item-background"><p>Бдд.Транспорт.Безопасность</p></li>
-                        <li class="field-study__item fs__item-background"><p>Нефтегазовая промышленность</p></li>
-                        <li class="field-study__item fs__item-background"><p>Строительство</p></li>
-                        <li class="field-study__item fs__item-background"><p>Землеустройство и кадастровые работы</p></li>
-                    </ul>
+          </div>
+          <div class="courses">
+            <ul class="courses__lists">
+              <li class="courses__item courses__item-background">
+                <p>Педагогика</p>
+              </li>
+              <li class="courses__item courses__item-background">
+                <p>Экологическая безопасность</p>
+              </li>
+              <li class="courses__item courses__item-background">
+                <p>Бдд.Транспорт.Безопасность</p>
+              </li>
+              <li class="courses__item courses__item-background">
+                <p>Нефтегазовая промышленность</p>
+              </li>
+              <li class="courses__item courses__item-background">
+                <p>Строительство</p>
+              </li>
+              <li class="courses__item courses__item-background">
+                <p>Землеустройство и кадастровые работы</p>
+              </li>
+            </ul>
+          </div>
+          <div class="FAQ">
+            <div class="FAQ__header"><h2>Часто задаваемые вопросы</h2></div>
+            <div class="FAQ__accordion">
+              <ul class="FAQ_lists">
+                <li class="FAQ_item">
+                  <div class="item__question">
+                    <h4>
+                      Чем отличается программа повышения квалификации от
+                      профессиональной переподготовки?
+                    </h4>
+                  </div>
+                  <div class="item__answer"><p></p></div>
+                </li>
+                <li class="FAQ_item">
+                  <div class="item__question">
+                    <h4>
+                      Чем отличается программа повышения квалификации от
+                      профессиональной переподготовки?
+                    </h4>
+                  </div>
+                  <div class="item__answer"><p></p></div>
+                </li>
+                <li class="FAQ_item">
+                  <div class="item__question">
+                    <h4>Какие формы обучения есть в вашем учебном центре?</h4>
+                  </div>
+                  <div class="item__answer"><p></p></div>
+                </li>
+                <li class="FAQ_item">
+                  <div class="item__question">
+                    <h4>
+                      Чем отличается профессиональное образование от
+                      дополнительного профессионального образования?
+                    </h4>
+                  </div>
+                  <div class="item__answer">
+                    <p>
+                      Профессиональное образование — вид образования, который
+                      направлен на приобретение обучающимися в процессе освоения
+                      основных профессиональных образовательных программ знаний,
+                      умений, навыков и формирование компетенции определенных
+                      уровня и объема, позволяющих вести профессиональную
+                      деятельность в определенной сфере и (или) выполнять работу
+                      по конкретным профессии или специальности. К освоению
+                      образовательных программ допускаются лица, имеющие
+                      образование не ниже основного общего или среднего общего
+                      образования. Дополнительное профессиональное образование
+                      направлено на удовлетворение образовательных и
+                      профессиональных потребностей, профессиональное развитие
+                      человека, обеспечение соответствия его квалификации
+                      меняющимся условиям профессиональной деятельности и
+                      социальной среды.
+                    </p>
+                  </div>
+                </li>
+                <li class="FAQ_item">
+                  <div class="item__question">
+                    <h4>
+                      Чем отличается программа повышения квалификации от
+                      профессиональной переподготовки?
+                    </h4>
+                  </div>
+                  <div class="item__answer"><p></p></div>
+                </li>
+              </ul>
             </div>
-            <div class="FAQ">
-                <div class="FAQ__header"><h2>Часто задаваемые вопросы</h2></div>
-                <div class="FAQ__accordion">
-                    <ul class="FAQ_lists">
-                        <li class="FAQ_item">
-                            <div class="item__question"><h4>Чем отличается программа повышения квалификации от профессиональной переподготовки?</h4></div>
-                            <div class="item__answer"><p></p></div>
-                        </li>
-                        <li class="FAQ_item">
-                            <div class="item__question"><h4>Чем отличается программа повышения квалификации от профессиональной переподготовки?</h4></div>
-                            <div class="item__answer"><p></p></div>
-                        </li>
-                        <li class="FAQ_item">
-                            <div class="item__question"><h4>Какие формы обучения есть в вашем учебном центре?</h4></div>
-                            <div class="item__answer"><p></p></div>
-                        </li>
-                        <li class="FAQ_item">
-                            <div class="item__question"><h4>Чем отличается профессиональное образование от дополнительного профессионального образования?</h4></div>
-                            <div class="item__answer"><p>Профессиональное образование — вид образования, который направлен на приобретение обучающимися в процессе освоения основных профессиональных образовательных программ знаний, умений, навыков и формирование компетенции определенных уровня и объема, позволяющих вести профессиональную деятельность в определенной сфере и (или) выполнять работу по конкретным профессии или специальности.
-                                К освоению образовательных программ допускаются лица, имеющие образование не ниже основного общего или среднего общего образования.
-                                Дополнительное профессиональное образование направлено на удовлетворение образовательных и профессиональных потребностей, профессиональное развитие человека, обеспечение соответствия его квалификации меняющимся условиям профессиональной деятельности и социальной среды.</p></div>
-                        </li>
-                        <li class="FAQ_item">
-                            <div class="item__question"><h4>Чем отличается программа повышения квалификации от профессиональной переподготовки?</h4></div>
-                            <div class="item__answer"><p></p></div>
-                        </li>
-
-                    </ul>
+            <div class="FAQ__buttons">
+              <div class="FAQ__button-ask button">Задать вопрос</div>
+              <div class="FAQ__button-more button">
+                Смотреть остальные вопросы
+              </div>
+            </div>
+          </div>
+          <div class="reviews">
+            <div class="reviews__header"><h2>Отзывы</h2></div>
+            <div class="reviews__list">
+              <div class="reviews__trigger">
+                <div class="reviews__title">
+                  <h5>Оставьте свой отзыв. <br />Нам важно ваше мнение.</h5>
                 </div>
-                <div class="FAQ__buttons">
-                    <div class="FAQ__button-ask button">Задать вопрос</div>
-                    <div class="FAQ__button-more button">Смотреть остальные вопросы</div>
+                <button class="reviews__button button">Оставить отзыв</button>
+              </div>
+              <div class="review__item">
+                <div class="review__header">
+                  <div class="review__user">
+                    <div class="review__name">Кристина М.</div>
+                    <div class="review__date">30.03.2024</div>
+                  </div>
                 </div>
-            </div>
-            <div class="reviews">
-                  <div class="reviews__header"><h2>Отзывы</h2></div>
-                <div class="reviews__list">
-                    <div class="reviews__trigger">
-                        <div class="reviews__title"><h5>Оставьте свой отзыв. <br>Нам важно ваше мнение.</h5></div>
-                        <button class="reviews__button button">Оставить отзыв</button>
-                    </div>
-                    <div class="review__item">
-                        <div class="review__header">
-                            <div class="review__user">
-                                <div class="review__name">Кристина М.</div>
-                                <div class="review__date">30.03.2024</div>
-                            </div>
-                        </div>
-                        <div class="review__rating">
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star"></span>
-                            <span class="review__star"></span>
-                        </div>
-                        <div class="review__content">
-                            <p>Текст отзыва...</p>
-                        </div>
-                    </div>
-                    <div class="review__item">
-                        <div class="review__header">
-                            <div class="review__user">
-                                <div class="review__name">Имя П.</div>
-                                <div class="review__date">Дата отзыва</div>
-                            </div>
-                        </div>
-                        <div class="review__rating">
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star review__star--active"></span>
-                            <span class="review__star"></span>
-                            <span class="review__star"></span>
-                        </div>
-                        <div class="review__content">
-                            <p>Текст отзыва...</p>
-                        </div>
-                    </div>
-                    <div class="slider-wrapper__dots">
-                        <div class="slider__dots">
-                            <div class="slider__dot"></div>
-                            <div class="slider__dot"></div>
-                            <div class="slider__dot"></div>
-                        </div>
+                <div class="review__rating">
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star"></span>
+                  <span class="review__star"></span>
                 </div>
+                <div class="review__content">
+                  <p>Текст отзыва...</p>
                 </div>
+              </div>
+              <div class="review__item">
+                <div class="review__header">
+                  <div class="review__user">
+                    <div class="review__name">Имя П.</div>
+                    <div class="review__date">Дата отзыва</div>
+                  </div>
+                </div>
+                <div class="review__rating">
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star review__star--active"></span>
+                  <span class="review__star"></span>
+                  <span class="review__star"></span>
+                </div>
+                <div class="review__content">
+                  <p>Текст отзыва...</p>
+                </div>
+              </div>
+              <div class="slider-wrapper__dots">
+                <div class="slider__dots">
+                  <div class="slider__dot"></div>
+                  <div class="slider__dot"></div>
+                  <div class="slider__dot"></div>
+                </div>
+              </div>
             </div>
-            <div class="form ">
-                <form action="#" class="form__body">
-                    <div class="form__contact-info">
-                        <h2 class="form__title">Закажите обратный звонок</h2>
-                        <h3 class="form__subtitle"><p>Заполните заявку и мы  свяжемся с вами в ближайшее время.
-                            Обращаем ваше внимание, что мы работаем в будни с 08:30 до 17:30.</p></h3>
-                        <div class="form__item">
-                            <label for="formName" class="form__label" ></label>
-                            <input id="formName" type="text" name="name" placeholder="Имя*" class="form__input" autocomplete="off">
-                        </div>
-                        <div class="form__item">
-                            <label for="formPhone" class="form__label"></label>
-                            <input id="formPhone" type="text" name="phone" placeholder="Телефон*"class="form__input">
-                        </div>
-                        <div class="form__item">
-                            <label for="formRegion" class="form__label"></label>
-                            <input id="formRegion" type="text" name="phone" placeholder="Регион*"class="form__input">
-                        </div>
-                    </div>
-                    <div class="form__actions">
-                        <button type="submit" class="form__button button ">Заказать звонок</button>
-                        <div class="form__checkbox">
-                            <input id="formAgreement" checked type="checkbox" name="argument" name="checkbox__input">
-                            <label for="formAgreement" class="checkbox__label"><span>Я согласен на обработку моих персональных данных в соответствии с <a href="">условиями*</a></span> </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="map">
-                <div class="map__body"></div>
-            </div>
+          </div>
+          <div class="form">
+            <form action="#" class="form__body">
+              <div class="form__contact-info">
+                <h2 class="form__title">Закажите обратный звонок</h2>
+                <h3 class="form__subtitle">
+                  <p>
+                    Заполните заявку и мы свяжемся с вами в ближайшее время.
+                    Обращаем ваше внимание, что мы работаем в будни с 08:30 до
+                    17:30.
+                  </p>
+                </h3>
+                <div class="form__item">
+                  <label for="formName" class="form__label"></label>
+                  <input
+                    id="formName"
+                    type="text"
+                    name="name"
+                    placeholder="Имя*"
+                    class="form__input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formPhone" class="form__label"></label>
+                  <input
+                    id="formPhone"
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон*"
+                    class="form__input"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formRegion" class="form__label"></label>
+                  <input
+                    id="formRegion"
+                    type="text"
+                    name="phone"
+                    placeholder="Регион*"
+                    class="form__input"
+                  />
+                </div>
+              </div>
+              <div class="form__actions">
+                <button type="submit" class="form__button button">
+                  Заказать звонок
+                </button>
+                <div class="form__checkbox">
+                  <input
+                    id="formAgreement"
+                    checked
+                    type="checkbox"
+                    name="argument"
+                    name="checkbox__input"
+                  />
+                  <label for="formAgreement" class="checkbox__label"
+                    ><span
+                      >Я согласен на обработку моих персональных данных в
+                      соответствии с <a href="">условиями*</a></span
+                    >
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="map">
+            <div class="map__body"></div>
+          </div>
         </div>
 
         <aside>
-            <div class="side-panel">
-                <div class="side-panel__side-menu">
-                    <ul class="side-menu__list">
-                        <li class="side-menu__item">Расписание очных занятий</li>
-                        <li class="side-menu__item">Охрана труда в ЕИСОТ</li>
-                        <li class="side-menu__item">ФИС ФРДО</li>
-                    </ul>
-                </div>
-                <div class="side-panel__banner">
-                    <div class="side-panel__banner-title"><h1>Скидка на обучение 15%</h1></div>
-                    <div class="side-panel__banner-subtitle"><p>Короткое описание, если оно неободимоКороткое описание, если оно </p></div>
-                    <div class="side-panel__banner-footer"><p>Акция действует 
-                        с 15.03.24 по 18.04.24 </p></div>
-                </div>
+          <div class="side-panel">
+            <div class="side-panel__side-menu">
+              <ul class="side-menu__list">
+                <li class="side-menu__item">Расписание очных занятий</li>
+                <li class="side-menu__item">Охрана труда в ЕИСОТ</li>
+                <li class="side-menu__item">ФИС ФРДО</li>
+              </ul>
             </div>
-
+            <div class="side-panel__banner">
+              <div class="side-panel__banner-title">
+                <h1>Скидка на обучение 15%</h1>
+              </div>
+              <div class="side-panel__banner-subtitle">
+                <p>
+                  Короткое описание, если оно неободимоКороткое описание, если
+                  оно
+                </p>
+              </div>
+              <div class="side-panel__banner-footer">
+                <p>Акция действует с 15.03.24 по 18.04.24</p>
+              </div>
+            </div>
+          </div>
         </aside>
-    </div>
-</main>
-<footer>
-    <div class="footer__body container">
+      </div>
+    </main>
+    <footer>
+      <div class="footer__body container">
         <div class="footer__section footer__section-qualification">
-            <div class="footer__title logo "></div>
-            <div class="footer__contacts-network">
-                <span class="contacts__whatsapp"></span>
-                <span class="contacts__vk"></span>
-                <span class="contacts__youtube"></span>
-            </div>
+          <div class="footer__title logo"></div>
+          <div class="footer__contacts-network">
+            <span class="contacts__whatsapp"></span>
+            <span class="contacts__vk"></span>
+            <span class="contacts__youtube"></span>
+          </div>
         </div>
         <div class="footer__section footer__section-training">
-            <h3 class="footer__title">Контакты отдела обучения</h3>
-                <ul class="footer__contacts">
-                    <li  class="footer__phone"><a href="tel:+73912191444" >+7 (391) 219-14-44</a></li>
-                    <li class="footer__email"><a href="mailto:nmo124@mail.ru">nmo124@mail.ru</a></li>
-                </ul>
+          <h3 class="footer__title">Контакты отдела обучения</h3>
+          <ul class="footer__contacts">
+            <li class="footer__phone">
+              <a href="tel:+73912191444">+7 (391) 219-14-44</a>
+            </li>
+            <li class="footer__email">
+              <a href="mailto:nmo124@mail.ru">nmo124@mail.ru</a>
+            </li>
+          </ul>
         </div>
         <div class="footer__section footer__section-medicine">
-            <h3 class="footer__title">Контакты отдела медицина</h3>
-                <ul class="footer__contacts">
-                    <li  class="footer__phone"><a href="tel:+78007752045">8 (800) 775-20-45</a></li>
-                    <li class="footer__email"><a href="mailto:nmo124@mail.ru">nmo124@mail.ru</a></li>
-                </ul>
+          <h3 class="footer__title">Контакты отдела медицина</h3>
+          <ul class="footer__contacts">
+            <li class="footer__phone">
+              <a href="tel:+78007752045">8 (800) 775-20-45</a>
+            </li>
+            <li class="footer__email">
+              <a href="mailto:nmo124@mail.ru">nmo124@mail.ru</a>
+            </li>
+          </ul>
         </div>
         <div class="footer__section">
-            <h3 class="footer__title"> Адрес и режим работы</h3>
-            <ul class="footer__section-address">
-                <li class="footer__address">г. Красноярск ул. Молокова, 14; пом. 240, 3 этаж</li>
-                <li class="footer__hours">пн-чт c 08:30 до 17:30</li>
-                <li class="footer__hours">пт с 08:30 до 15:00</li>
-            </ul>
+          <h3 class="footer__title">Адрес и режим работы</h3>
+          <ul class="footer__section-address">
+            <li class="footer__address">
+              г. Красноярск ул. Молокова, 14; пом. 240, 3 этаж
+            </li>
+            <li class="footer__hours">пн-чт c 08:30 до 17:30</li>
+            <li class="footer__hours">пт с 08:30 до 15:00</li>
+          </ul>
         </div>
-    </div>
-    <div class="footer__bottom ">
+      </div>
+      <div class="footer__bottom">
         <a href="#" class="footer__policy">Политика конфиденциальности</a>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
