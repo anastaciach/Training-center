@@ -134,15 +134,19 @@
     
     --container-width-small:1084px;
     --container-width-aside:px;
-    --container-width:1450px;
+    --container-width:1250px;/*1450 было*/
     --container-padding-x: 150px;/*235px было*//*200px ideal*/
     --transition-duration:0.2s;
+
+    --size-width-icon:24px;
+    --size-height-icon:14px;
 }
 .wrapper-section>div:not(:last-child){
     margin-bottom: 40px;
 }
 .slider,.description,.directions,.field-study,.FAQ,.reviews,.form,.map{
     max-width:var(--container-width-small);
+        
 }
 
 /* *{
@@ -177,6 +181,7 @@ a {
     max-width: var(--container-width);
     margin-inline:auto;
     padding-inline:var(--container-padding-x);
+
 
 }
 h1,h2,h3,h4,h5,h6{
@@ -298,11 +303,15 @@ h4{
     display: flex;
     flex-direction: column;
     font-size: 14px;
+    
 }
 .contact-list__item a{
     display: flex;
     color:#3f3f3f;
-    gap: 2px;
+    gap: 5px;
+}
+.contact-list__item:not(:last-child){
+    margin-bottom: 5px;
 }
 .button{
  border-radius: 4px;
@@ -314,12 +323,14 @@ h4{
  font-size: 14px;
  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
+
 .button:hover{
     content: '';
     top: 0;
     left: 0;
     background-color: #FF6600;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .header__menu-button{
@@ -330,17 +341,19 @@ h4{
 .phone__icon::before{
     content:'';
     display: block;
-    width: 17px;
-    height: 20px;
+    width: 15px;
+    height: 18px;
     background: url(../assets/icons/phone_icon.svg) center/cover no-repeat;
+
 }
 .email__icon::before{
     content:'';
     display: block;
-    width: 18px;
-    height: 15px;
+    width: 16px;
+    height: 13px;
     background: url(../assets/icons/email_icon.svg) center/cover no-repeat;
 }
+
 /*шапка3: меню,обучение,медицина*/
 .header__menu-main{
     padding-top: 10px;
@@ -401,12 +414,10 @@ h4{
 /*конец шапка3*/
 .main-wrapper{
     display:flex;
+    column-gap: 40px;
 }
 
 /*начало стилей слайдера*/
-.slider{
-    max-width:var(--container-width-small);
-}
 .slider__items{
     display: flex;
     flex-direction: column;
@@ -416,8 +427,9 @@ h4{
 }
 
 .slider__item{
-    width: 1077px;
-    height: 361px;
+    width: 100%;
+    height: 360px;
+
 }
 .slider__button-prev{
     position:absolute;
@@ -432,7 +444,7 @@ h4{
     border:none;
 }
 .slider__background-image{
-    width: 90%;
+    max-width:800px;
     height: 260px;
     background: #f332f2;
     background: url(../assets/images/slider-background_1.png) no-repeat center center / cover;
@@ -1086,3 +1098,51 @@ opacity: 0.5;
 /**/
 
 /* Конец  стили для страницы education-program-catalog*/
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media( (min-width: 1200px)) {
+.container{
+    /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+     max-width: var(--container-width);
+     margin-inline:auto;
+     padding-inline:100px;
+ }
+ .slider,.description,.directions,.field-study,.FAQ,.reviews,.form,.map{
+    max-width:800px;
+}
+body{ 
+    font-size:13px;
+}
+h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 17px;
+}
+h4{
+    font-size: 13px;
+}
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+.container{
+    /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+     max-width: var(--container-width);
+     margin-inline:auto;
+     padding-inline:100px;
+ }
+ .slider,.description,.directions,.field-study,.FAQ,.reviews,.form,.map{
+    max-width:1000px;
+}
+}
