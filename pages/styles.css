@@ -310,7 +310,7 @@ h4 {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 .contact-list__item a {
   display: flex;
@@ -426,7 +426,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: ;
+
   /*transition: all 1s;*/
 }
 
@@ -1111,40 +1111,197 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    
+    .side-panel {
+        min-width: 100px;
+        font-size: 10px;
+        font-weight: 600;
+      }
+      .side-panel__side-menu {
+        margin-bottom: 20px;
+      }
+      .side-menu__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+      }
+      .side-menu__item {
+        display: flex;
+        align-items: center;
+        /* margin-left: 25px; */
+      }
+      .side-panel__banner {
+        width: 170px;
+        height: 115px;
+      }
+    .container {
+        /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+        max-width: var(--container-width);
+        margin-inline: auto;
+        padding-inline: 29px;
+      }
+
+      .slider,
+      .description,
+      .directions,
+      .field-study,
+      .FAQ,
+      .reviews,
+      .form,
+      .map {
+        max-width: 600px;
+      }
+      body {
+        font-size: 13px;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+      h4 {
+        font-size: 13px;
+      }
+      .button {
+        width: 150px;
+        height: 30px;
+        background: var(--color-button);
+        color: #ffffff;
+        font-size: 12px;
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+      }
+      .search__container {
+        border: none;
+        background: transparent;
+        padding: 0;
+      }
+      .search__input {
+        display: none;
+      }
+      .search-btn::after{
+        border: none;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+      }
+            /*начало стили header*/
+            .header__menu-addit,
+            .header__menu-info,
+            .header__menu-main {
+              display: flex;
+              column-gap: 30px;
+            }
+                  .header__menu-contact-list {
+                
+                    font-size: 12px;
+                  }
+                  .contact-list__item a {
+                    gap: 5px;
+                  } 
+                       .header__menu-item.eye-icon  {
+        font-size:  0; /* Скрываем текст, устанавливая размер шрифта 0 */
+      }
+      .header__menu-item,
+.header__menu-item > a {
+  gap: 5px;
+  line-height: 1;
+  white-space: nowrap;
+}
+      .header__menu-button {
+        width: 120px;
+        height: 40px;
+      }
+                  /*конец стили header*/
+
+      .directions-item {
+        min-width: 230px;
+        height: 200px;
+      }
+      .directions-list {
+        gap: 0px 10px; /* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+        grid-template-columns: repeat(
+          2,
+          1fr
+        ); /*repeat(auto-fit, minmax(50px, 1fr))*/
+      }
+      /*НАЧАЛО блока descriptions*/
+      .description__advantages {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .description__title > h1 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    
+      .advantages-lists__item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: url(../assets/icons/plus_icon.svg) no-repeat center;
+        background-size: contain;
+      }
+    
+      .advantages-context {
+        display: grid;
+        align-items: center;
+        max-width: 400px;
+      }
+    
+      /*Конец блока descriptions*/
+      .courses__lists {
+        grid-template-columns: repeat(
+          2,
+          1fr
+        ); /*repeat(auto-fit, minmax(50px, 1fr))*/
+      }
+      .FAQ__button-ask {
+        color: #3f3f3f;
+        background-color: #fff;
+      }
+      .reviews__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .container {
-        /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
-        max-width: 900px;
-        margin-inline: auto;
-        padding-inline: 80px;
-      }
-      /*начало стили header*/
-      .header__menu-contact-list {
-        display: flex;
-        flex-direction: column;
+  .container {
+    /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: 80px;
+  }
+  /*начало стили header*/
+  .header__menu-contact-list {
+    display: flex;
+    flex-direction: column;
 
-        font-size: 12px;
-      }
-      .contact-list__item a {
-        display: flex;
-        color: #3f3f3f;
-        gap: 5px;
-      }
-      /*конец стили header*/
-      .slider,
-.description,
-.directions,
-.field-study,
-.FAQ,
-.reviews,
-.form,
-.map {
-  max-width: 600px;
-}
-body{
+    font-size: 12px;
+  }
+  .contact-list__item a {
+    display: flex;
+    color: #3f3f3f;
+    gap: 5px;
+  }
+  /*конец стили header*/
+  .slider,
+  .description,
+  .directions,
+  .field-study,
+  .FAQ,
+  .reviews,
+  .form,
+  .map {
+    max-width: 600px;
+  }
+  body {
     font-size: 13px;
     font-weight: 400;
   }
@@ -1170,51 +1327,61 @@ body{
     width: 120px;
     height: 40px;
   }
-  .header__menu-info{
+  .header__menu-info {
     column-gap: 35px;
   }
-  .description__advantages {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+  
   .directions-item {
     min-width: 230px;
     height: 200px;
   }
   .directions-list {
     gap: 0px 10px; /* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
-    grid-template-columns: repeat(2, 1fr); /*repeat(auto-fit, minmax(50px, 1fr))*/
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
-      /*НАЧАЛО блока descriptions*/
-      .description__title > h1 {
-        font-weight: 600;
-        font-size: 20px;
-      }
-      .description__advantages {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      
-      .advantages-lists__item::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        background: url(../assets/icons/plus_icon.svg) no-repeat center;
-        background-size: contain;
-      }
-      
-      .advantages-context {
-        display: grid;
-        align-items: center;
-        max-width: 400px;
-      }
-      
-      /*Конец блока descriptions*/
-      .courses__lists {
-        grid-template-columns: repeat(2, 1fr); /*repeat(auto-fit, minmax(50px, 1fr))*/
-      }
+  /*НАЧАЛО блока descriptions*/
+  .description__advantages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .description__title > h1 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .advantages-lists__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: url(../assets/icons/plus_icon.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  .advantages-context {
+    display: grid;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  /*Конец блока descriptions*/
+  .courses__lists {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
+  }
+  .FAQ__button-ask {
+    color: #3f3f3f;
+    background-color: #fff;
+  }
+  .reviews__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -1223,7 +1390,8 @@ body{
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
     max-width: var(--container-width);
     margin-inline: auto;
-    padding-inline: 100px;
+    padding-left: calc(var(--container-padding-x -10px));
+    padding-right: calc(var(--container-padding-x -10px));
   }
   .slider,
   .description,
@@ -1254,14 +1422,20 @@ body{
     gap: 20px;
   }
   .directions-list {
-    grid-template-columns: repeat(3, 1fr); /*repeat(auto-fit, minmax(50px, 1fr))*/
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
   .directions-item {
     min-width: 230px;
     height: 220px;
   }
   .courses__lists {
-    grid-template-columns: repeat(3, 1fr); /*repeat(auto-fit, minmax(50px, 1fr))*/
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -1286,6 +1460,9 @@ body{
     grid-template-columns: repeat(3, 1fr);
   }
   .directions-list {
-    grid-template-columns: repeat(3, 1fr); /*repeat(auto-fit, minmax(50px, 1fr))*/
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
 }
