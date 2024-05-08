@@ -134,7 +134,7 @@
 
   --container-width-small: 1084px;
   --container-width-aside: px;
-  --container-width: 1250px; /*1450 было*/
+  --container-width: 1450px; /*1450 было*/
   --container-padding-x: 150px; /*235px было*/ /*200px ideal*/
   --transition-duration: 0.2s;
 
@@ -157,7 +157,10 @@
 
 /* *{
 border: 1px solid black;} */
-
+html{
+  /* Для модального окна */
+  scrollbar-gutter: stable;
+}
 body {
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -209,30 +212,34 @@ h4 {
   background: url(../assets/svg/лого.svg) center/contain no-repeat;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
   display: block;
+  position:relative;
+  bottom:3px;
+  right: 7px;
+
 }
 
 .wrapper-section {
   display: flex;
   flex-direction: column;
 }
-.gps-icon::before {
+/* .gps-icon::before {
   content: "";
   width: 12px;
   height: 13px;
-  /* background: url(../assets/icons/gps.svg) center/cover no-repeat; */
-}
+   background: url(../assets/icons/gps.svg) center/cover no-repeat;
+} */
 .caret-icon::after {
   content: "";
   width: 8px;
   height: 6px;
   /* background: url(../assets/icons/caret_bottom.svg) center/cover no-repeat; */
 }
-.eye-icon::after {
+/* .eye-icon::after {
   content: "";
   width: 15px;
   height: 12px;
-  /* background: url(../assets/icons/eye.svg) center/cover no-repeat; */
-}
+  background: url(../assets/icons/eye.svg) center/cover no-repeat; 
+} */
 .header__menu {
   display: flex;
   flex-direction: column;
@@ -316,6 +323,9 @@ h4 {
   display: flex;
   color: #3f3f3f;
   gap: 5px;
+}
+.header__menu-link{
+  position: relative;
 }
 .contact-list__item:not(:last-child) {
   margin-bottom: 5px;
@@ -418,7 +428,7 @@ h4 {
 /*конец шапка3*/
 .main-wrapper {
   display: flex;
-  column-gap: 40px;
+  column-gap: 5%;
 }
 
 /*начало стилей слайдера*/
@@ -447,8 +457,8 @@ h4 {
   border: none;
 }
 .slider__background-image {
-  max-width: 800px;
-  height: 260px;
+  max-width: 100%;
+  height: 240px;
   background: #f332f2;
   background: url(../assets/images/slider-background_1.png) no-repeat center
     center / cover;
@@ -457,7 +467,7 @@ h4 {
 }
 .slider__content {
   margin-left: 20px;
-  top: 30px;
+  top: 10%;
   width: 450px;
   height: 200px;
   position: relative;
@@ -469,7 +479,7 @@ h4 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 95%;
   background-color: rgba(233, 233, 233, 0.9);
   box-sizing: border-box;
 }
@@ -492,7 +502,7 @@ h4 {
   color: #000;
   line-height: 150%;
   width: 400px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .slider__button {
   margin-left: 20px;
@@ -882,17 +892,19 @@ h4 {
   font-weight: 600;
 }
 .side-panel__side-menu {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .side-menu__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 .side-menu__item {
   display: flex;
   align-items: center;
+  background: var(--color-footer);
+  padding: 3px;
   /* margin-left: 25px; */
 }
 .side-menu__item::before {
@@ -900,6 +912,7 @@ h4 {
   display: inline-block;
   width: 25px;
   height: 25px;
+  margin-right: 10px;
   background: url(../assets/icons/arrow_icon.svg) center no-repeat;
 }
 .side-panel__banner {
@@ -1165,7 +1178,7 @@ footer {
   .header__menu-main {
     column-gap: 30px;
   }
-  .header__menu-item.eye-icon {
+  .header__menu-item .eye-icon {
     font-size: 0; /* Скрываем текст, устанавливая размер шрифта 0 */
   }
   .header__menu-item,
@@ -1254,7 +1267,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
   /*Начало блока side(боковая панель)*/
-  .side-panel {
+  /* .side-panel {
     position: relative;
     min-width: 130px;
     max-width: 200px;
@@ -1270,7 +1283,7 @@ footer {
   .side-panel__banner-footer{
     position: absolute;
     bottom: 0px;
-  }
+  } */
   /*Конец блока side(боковая панель)*/
   /*Конец блока directions*/
   .courses__lists {
@@ -1415,11 +1428,11 @@ footer {
     /*Начало блока side(боковая панель)*/
     .side-panel {
       position: relative;
-      min-width: 200px;
+      width: 220px;
       font-size: 10px;
     }
     .side-panel__banner {
-      max-width: 220px;
+      width:100%;
       height: 145px;
     }
     .side-panel__banner-subtitle{
@@ -1438,8 +1451,8 @@ footer {
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
     max-width: var(--container-width);
     margin-inline: auto;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .slider,
   .description,
@@ -1539,6 +1552,25 @@ footer {
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
   } /*Конец блока reviews*/
+  /*Начало блока side(боковая панель)*/
+  .side-panel {
+    position: relative;
+    width: 220px;
+    font-size:11px;
+  }
+
+  .side-panel__banner {
+    width: 100%;
+    height: 145px;
+  }
+  .side-panel__banner-subtitle{
+    display: block;
+  }
+  .side-panel__banner-footer{
+    position: absolute;
+    bottom: 0px;
+  }
+  /*Конец блока side(боковая панель)*/
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
