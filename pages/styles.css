@@ -1118,8 +1118,228 @@ footer {
 /**/
 
 /* Конец  стили для страницы education-program-catalog*/
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  
+
+  .container {
+    /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 50px;
+  }
+
+  .slider,
+  .description,
+  .directions,
+  .field-study,
+  .FAQ,
+  .reviews,
+  .form,
+  .map {
+    max-width: 600px;
+  }
+  body {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 13px;
+  }
+  /*Начало стилей кнопки*/
+  .button {
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .burger-button{
+    padding: 0;
+background-color: transparent;
+border: none;
+  position:relative;
+  display: none;
+  width: 48px;
+}
+
+.burger-button::after{
+  position: absolute;
+  content: '';
+  width:50%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-shadow: 0 -8px, 0 8px;
+}
+.burger-button:hover{
+  background-color:var(--color-button);
+}
+.visible-mobile{
+  display: block;
+}
+
+  /*Конец стилей кнопки*/
+  /*начало стили header*/
+  .header__menu-contact-list {
+    font-size: 12px;
+  }
+  .contact-list__item a {
+    gap: 5px;
+  }
+
+  .header__menu-button {
+    width: 120px;
+    height: 40px;
+  }
+  .header__menu-logo {
+    max-width: 400px;
+    min-width: 150px;
+    height: 30px;
+  }
+  .header__menu-addit,
+  .header__menu-info,
+  .header__menu-main {
+    column-gap: 30px;
+  }
+  .header__menu-item .eye-icon {
+    font-size: 0; /* Скрываем текст, устанавливая размер шрифта 0 */
+  }
+  .header__menu-item,
+  .header__menu-item > a {
+    white-space: nowrap;
+  }
+  .search__container {
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+  .search__input {
+    display: none;
+  }
+  .search-btn::after {
+    border: none;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+  }
+  /*конец стили header*/
+   /*НАЧАЛО блока descriptions*/
+   .description__advantages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .description__title > h1 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .advantages-lists__item::before {
+    width: 50px;
+    height: 50px;
+    /* background-size: contain; */
+  }
+
+  .advantages-context {
+    max-width: 400px;
+  }
+
+  /*Конец блока descriptions*/
+  /*Начало блока directions*/
+  .directions-item {
+    min-width: 210px;
+    height: 180px;
+  }
+  .directions-list {
+    gap: 0px 10px; /* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
+    grid-template-columns: repeat(2, 1fr);
+    /*Конец блока directions*/
+  }
+  .description__advantages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .description__title > h1 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  /*НАЧАЛО блока descriptions*/
+
+  .advantages-lists__item::before {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+  }
+
+  .advantages-context {
+    display: grid;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  /*Конец блока descriptions*/
+  .courses__lists {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*repeat(auto-fit, minmax(50px, 1fr))*/
+  }
+  .FAQ__button-ask {
+    color: #3f3f3f;
+    background-color: #fff;
+  }
+  .reviews__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /*Начало блока side(боковая панель)*/
+  .side-panel {
+    position: relative;
+    width: 130px;
+    font-size: 10px;
+  }
+  .side-panel__banner {
+    width: 160px;
+    height: 115px;
+  }
+  .side-panel__banner-subtitle{
+    display: none;
+  }
+  .side-panel__banner-footer{
+    position: absolute;
+    bottom: 0px;
+  }
+  /*Конец блока side(боковая панель)*/
+
+  .courses__lists {
+    gap: 10px 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .FAQ__button-ask {
+    background-color: #fff;
+  }
+  .form__body {
+flex-direction: column;
+  }
+  .form__contact-info {
+    padding: 25px 30px 10px 23px;
+  }
+  .footer__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer__section-qualification {
+    grid-column: 1/4;
+  }
+
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -1162,6 +1382,11 @@ footer {
   }
   /*Конец стилей кнопки*/
   /*начало стили header*/
+  .burger-button{
+    display: none;
+  }
+
+
   .header__menu-contact-list {
     font-size: 12px;
   }
@@ -1172,6 +1397,11 @@ footer {
   .header__menu-button {
     width: 120px;
     height: 40px;
+  }
+  .header__menu-logo {
+    max-width: 500px;
+    min-width: 200px;
+    height: 30px;
   }
   .header__menu-addit,
   .header__menu-info,
@@ -1267,14 +1497,14 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
   /*Начало блока side(боковая панель)*/
-  /* .side-panel {
+  .side-panel {
     position: relative;
-    min-width: 130px;
-    max-width: 200px;
+    width: 130px;
+
     font-size: 10px;
   }
   .side-panel__banner {
-    max-width: 130px;
+    width: 160px;
     height: 115px;
   }
   .side-panel__banner-subtitle{
@@ -1283,9 +1513,9 @@ footer {
   .side-panel__banner-footer{
     position: absolute;
     bottom: 0px;
-  } */
+  }
   /*Конец блока side(боковая панель)*/
-  /*Конец блока directions*/
+
   .courses__lists {
     gap: 10px 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -1339,6 +1569,10 @@ footer {
     width: 150px;
     height: 30px;
     font-size: 12px;
+  }
+  .burger-button{
+    display: none;
+  
   }
   /*Конец стилей кнопки*/
   /*начало стилей header*/
@@ -1422,6 +1656,12 @@ footer {
     color: #3f3f3f;
     background-color: #fff;
   }
+  .form__body {
+    flex-direction: row;
+      }
+      .form__contact-info {
+        padding: 25px 30px 40px 23px;
+      }
   .footer__body {
     display: flex;
   }
