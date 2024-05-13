@@ -1189,7 +1189,6 @@ border:none;
     background-color: transparent;
     border: none;
     position:relative;
-    display: none;
     width: 48px;
     color:#292929;
     filter: none;
@@ -1197,21 +1196,18 @@ border:none;
 
 .burger-button::after{
   position: absolute;
-  content: '';
-  width:50%;
-  height: 2px;
-  background-color: black;
-  border-radius: 4px;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color:black;
+  border-radius: 5px;
   box-shadow: 0 -8px, 0 8px;
 }
 .burger-button:hover{
   background-color:#898989;
-}
-.visible-mobile{
-  display: block;
 }
 
   /*Конец стилей кнопки*/
