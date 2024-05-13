@@ -141,6 +141,7 @@
   --size-width-icon: 24px;
   --size-height-icon: 14px;
 }
+
 .wrapper-section > div:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -331,6 +332,7 @@ h4 {
   margin-bottom: 5px;
 }
 .button {
+  
   border-radius: 4px;
   border: none;
   width: 120px;
@@ -1006,6 +1008,28 @@ footer {
 
 /*Конец стилей блока Footer*/
 
+/*Начало стилей блока МЕНЮ*/
+.mobile-overlay{
+width:100%;
+height:100%;
+margin:0;
+padding: 14px 20px;
+border:none;
+}
+.mobile-overlay:modal{
+  max-width: 100%;
+  max-height: 100%;
+}
+.mobile-overlay__close-button-wrapper{
+  display: flex;
+  justify-content: end;
+}
+.mobile-overlay__list{
+  flex-center;
+}
+/*Конец стилей блока МЕНЮ*/
+
+
 /* НАЧАЛО стили для страницы education-program-catalog*/
 /*Начало блока стилей education-direction*/
 
@@ -1121,7 +1145,6 @@ footer {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  
 
   .container {
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
@@ -1159,14 +1182,17 @@ footer {
     width: 140px;
     height: 30px;
     font-size: 12px;
+
   }
   .burger-button{
     padding: 0;
-background-color: transparent;
-border: none;
-  position:relative;
-  display: none;
-  width: 48px;
+    background-color: transparent;
+    border: none;
+    position:relative;
+    display: none;
+    width: 48px;
+    color:#292929;
+    filter: none;
 }
 
 .burger-button::after{
@@ -1174,7 +1200,7 @@ border: none;
   content: '';
   width:50%;
   height: 2px;
-  background-color: var(--color-secondary);
+  background-color: black;
   border-radius: 4px;
   top: 50%;
   left: 50%;
@@ -1182,7 +1208,7 @@ border: none;
   box-shadow: 0 -8px, 0 8px;
 }
 .burger-button:hover{
-  background-color:var(--color-button);
+  background-color:#898989;
 }
 .visible-mobile{
   display: block;
@@ -1382,10 +1408,6 @@ flex-direction: column;
   }
   /*Конец стилей кнопки*/
   /*начало стили header*/
-  .burger-button{
-    display: none;
-  }
-
 
   .header__menu-contact-list {
     font-size: 12px;
@@ -1919,4 +1941,14 @@ flex-direction: column;
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
   } /*Конец блока reviews*/
+}
+@media(hover:hover){
+  button:hover, .burger-button:hover{
+    background-color: pink;
+  }
+}
+@media(hover:none){
+  button:active, .burger-button:active{
+    background-color: pink;
+  }
 }
