@@ -36,7 +36,7 @@
 
               <a href="" class="header__menu-link">Красноярск</a>
             </li>
-            <li class="header__menu-item caret-icon">
+            <li class="header__menu-item caret-icon hidden-mobile">
               <a href="" class="header__menu-link">О компании</a>
               <svg
                 width="8"
@@ -51,8 +51,26 @@
                 />
               </svg>
             </li>
-            <li class="header__menu-item">
+            <li class="header__menu-item hidden-mobile">
               <a href="" class="header__menu-link">Получить кп</a>
+            </li>
+            <li class="header__menu-item header__menu-contact-list">
+              <a href="tel:88007752045" class="contact-list__item phone__icon"
+                ><svg
+                  width="16"
+                  height="13"
+                  viewBox="0 0 17 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.7463 13.8598L12.1342 12.1798C12.3212 11.9564 12.5577 11.8034 12.8151 11.7395C13.0725 11.6756 13.3396 11.7035 13.5842 11.8198L15.2757 12.6373C15.5228 12.7587 15.7347 12.966 15.8847 13.2329C16.0346 13.4998 16.116 13.8145 16.1184 14.1373V17.8873C16.117 18.1069 16.0788 18.3239 16.0063 18.5252C15.9338 18.7264 15.8283 18.9079 15.6963 19.0585C15.5643 19.2092 15.4085 19.3259 15.2383 19.4018C15.068 19.4776 14.8869 19.511 14.7057 19.4998C2.85231 18.6073 0.460575 6.45733 0.00825179 1.80734C-0.0127454 1.57899 0.00643917 1.34785 0.0645433 1.12912C0.122647 0.91039 0.218354 0.709031 0.345367 0.538288C0.472381 0.367546 0.627822 0.23129 0.801465 0.138484C0.975107 0.0456784 1.16302 -0.00157383 1.35283 -0.000163807H4.3456C4.61266 0.000793032 4.87338 0.0984369 5.09422 0.280208C5.31507 0.46198 5.48593 0.719566 5.58484 1.01984L6.26023 3.06734C6.35953 3.36214 6.38486 3.68582 6.33307 3.99795C6.28127 4.31007 6.15465 4.59681 5.96901 4.82234L4.58106 6.50234C4.58106 6.50234 5.38037 13.0498 10.7463 13.8598Z"
+                    fill="black"
+                  />
+                </svg>
+
+                8 (800) 775-20-45
+              </a>
             </li>
             <li class="header__menu-item eye-icon">
               <svg
@@ -77,51 +95,76 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              <a href="" class="header__menu-link">Версия для слабовидящих</a>
+              <a href="" class="header__menu-link hidden-mobile"
+                >Версия для слабовидящих</a
+              >
             </li>
           </ul>
         </div>
         <div class="menu-info__background">
           <ul class="container header__menu-info">
+            <button
+              class="burger-button"
+              type="button"
+              onclick="mobileOverlay.showModal()"
+            ></button>
             <li class="header__menu-item">
               <a href="/" class="header__menu-link"
                 ><span class="header__menu-logo logo"></span
               ></a>
             </li>
-            <li class="header__menu-item">
-              <div class="search__container">
-                <input class="search__input" placeholder="Поиск по сайту" />
-                <button class="search-btn"></button>
-              </div>
+            <li class="header__menu-item search__container">
+              <input
+                class="search__input hidden-mobile"
+                placeholder="Поиск по сайту"
+              />
+              <button class="search-btn"></button>
             </li>
-            <li class="header__menu-item">
-              <div class="header__menu-contact-list">
-                <div class="contact-list__item">
-                  <a href="tel:88007752045" class="phone__icon"
-                    >8 (800) 775-20-45
-                  </a>
-                </div>
-                <div class="contact-list__item">
-                  <a href="mailto:nmo124@mail.ru" class="email__icon"
-                    >nmo124@mail.ru</a
-                  >
-                </div>
-              </div>
+            <li
+              class="header__menu-item header__menu-contact-list hidden-mobile"
+            >
+              <a href="tel:88007752045" class="contact-list__item phone__icon"
+                ><svg
+                  width="15"
+                  height="18"
+                  viewBox="0 0 17 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.7463 13.8598L12.1342 12.1798C12.3212 11.9564 12.5577 11.8034 12.8151 11.7395C13.0725 11.6756 13.3396 11.7035 13.5842 11.8198L15.2757 12.6373C15.5228 12.7587 15.7347 12.966 15.8847 13.2329C16.0346 13.4998 16.116 13.8145 16.1184 14.1373V17.8873C16.117 18.1069 16.0788 18.3239 16.0063 18.5252C15.9338 18.7264 15.8283 18.9079 15.6963 19.0585C15.5643 19.2092 15.4085 19.3259 15.2383 19.4018C15.068 19.4776 14.8869 19.511 14.7057 19.4998C2.85231 18.6073 0.460575 6.45733 0.00825179 1.80734C-0.0127454 1.57899 0.00643917 1.34785 0.0645433 1.12912C0.122647 0.91039 0.218354 0.709031 0.345367 0.538288C0.472381 0.367546 0.627822 0.23129 0.801465 0.138484C0.975107 0.0456784 1.16302 -0.00157383 1.35283 -0.000163807H4.3456C4.61266 0.000793032 4.87338 0.0984369 5.09422 0.280208C5.31507 0.46198 5.48593 0.719566 5.58484 1.01984L6.26023 3.06734C6.35953 3.36214 6.38486 3.68582 6.33307 3.99795C6.28127 4.31007 6.15465 4.59681 5.96901 4.82234L4.58106 6.50234C4.58106 6.50234 5.38037 13.0498 10.7463 13.8598Z"
+                    fill="black"
+                  />
+                </svg>
+
+                8 (800) 775-20-45
+              </a>
+              <a
+                href="mailto:nmo124@mail.ru"
+                class="contact-list__item email__icon"
+                ><svg
+                  width="16"
+                  height="13"
+                  viewBox="0 0 18 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 0C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V3.3015L9 8.148L18 3.303V3C18 2.20435 17.6839 1.44129 17.1213 0.87868C16.5587 0.31607 15.7956 0 15 0H3ZM18 5.0055L9.3555 9.66C9.24624 9.71882 9.12409 9.74961 9 9.74961C8.87591 9.74961 8.75376 9.71882 8.6445 9.66L0 5.0055V12C0 12.7956 0.31607 13.5587 0.87868 14.1213C1.44129 14.6839 2.20435 15 3 15H15C15.7956 15 16.5587 14.6839 17.1213 14.1213C17.6839 13.5587 18 12.7956 18 12V5.0055Z"
+                    fill="black"
+                  />
+                </svg>
+
+                nmo124@mail.ru</a
+              >
             </li>
-            <li class="header__menu-item">
+            <li class="header__menu-item hidden-mobile">
               <button class="header__menu-button button">Обратная связь</button>
-            </li>
-            <li class="header__menu-item">
-              <button
-                class="burger-button button"
-                type="button"
-                onclick="mobileOverlay.showModal()"
-              ></button>
             </li>
           </ul>
         </div>
-        <div class="menu-main__background">
-          <ul class="container header__menu-main">
+        <div class="menu-main__background hidden-mobile">
+          <ul class="container header__menu-main hidden-mobile">
             <li class="header__menu-item">
               <a href="" class="header__menu-link header__menu-burger">
                 <svg
@@ -242,6 +285,27 @@
           </ul>
         </div>
       </nav>
+      <!-- <form
+        class="container search__container hidden-mobile"
+        action=""
+        method="get"
+      >
+        <div class="">
+          <input
+          class="search-btn"
+            type="text"
+            name="s"
+            placeholder="Поиск по сайту"
+            aria-label="Поиск по сайту"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="Закрыть"
+          class="header-form__button"
+          type="button"
+        ></button>
+      </form> -->
     </header>
     <main>
       <div class="main-wrapper container">
