@@ -141,6 +141,9 @@
   --size-width-icon: 24px;
   --size-height-icon: 14px;
 }
+/* *{
+  outline: 1px solid green;
+} */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -471,6 +474,7 @@ h4 {
 /*конец шапка3*/
 .main-wrapper {
   display: flex;
+  margin-left: auto;
   column-gap: 5%;
 }
 
@@ -634,8 +638,7 @@ h4 {
   justify-content: stretch; /*выравнивание по горизонтали по умолчанию*/
 }
 .directions-item {
-  min-width: 230px;
-  width: auto;
+  max-width: 230px;
   height: 220px;
   background: var(--color-primary-blue) no-repeat center;
   flex-wrap: wrap;
@@ -723,17 +726,21 @@ h4 {
   gap: 10px;
 }
 .FAQ_item {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   position: relative;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.2);
+  padding: 0px;
 }
 .item__question {
-  max-width: 800px;
+  flex: 1; /* Занимает оставшееся пространство */
+  width: 100%;
 }
 .item__question > h4 {
-  height: 100%;
+
   box-sizing: border-box;
   overflow: auto;
   padding-right: 50px;
@@ -754,7 +761,7 @@ h4 {
   width: 50px;
   position: absolute;
   top: 50%; /* Положение вертикально посередине */
-  right: 20px; /* Увеличиваем расстояние справа */
+  right: 0px; /* Увеличиваем расстояние справа */
   transform: translateY(-50%); /* Центрирование по вертикали */
 
   color: #000; /* Цвет иконки */
@@ -930,7 +937,7 @@ h4 {
 
 /*Начало стилей блока Боковая панель*/
 .side-panel {
-  min-width: 200px;
+  width: 200px;
   font-size: 10px;
   font-weight: 600;
 }
@@ -1248,7 +1255,7 @@ background: rgb(255 0 0/0.5);
   body {
     font-size: 12px;
     font-weight: 400;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   h2 {
     font-size: 18px;
@@ -1350,7 +1357,7 @@ background: rgb(255 0 0/0.5);
   /*конец стили header*/
    /*НАЧАЛО блока descriptions*/
    .description__advantages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
   .description__title > h1 {
@@ -1375,11 +1382,11 @@ background: rgb(255 0 0/0.5);
   }
   .directions-list {
     gap: 0px 10px; /* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     /*Конец блока directions*/
   }
   .description__advantages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
   .description__title > h1 {
@@ -1412,7 +1419,7 @@ background: rgb(255 0 0/0.5);
     background-color: #fff;
   }
   .reviews__list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   /*Начало блока side(боковая панель)*/
   .side-panel {
@@ -1435,7 +1442,7 @@ background: rgb(255 0 0/0.5);
 
   .courses__lists {
     gap: 10px 10px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .FAQ__button-ask {
     background-color: #fff;
@@ -1601,7 +1608,7 @@ flex-direction: column;
   /*Конец блока descriptions*/
   /*Начало блока directions*/
   .directions-item {
-    min-width: 210px;
+    max-width: 210px;
     height: 180px;
   }
   .directions-list {
@@ -1679,11 +1686,12 @@ flex-direction: column;
   }
   .footer__body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
   .footer__section-qualification {
-    grid-column: 1/4;
+    grid-column: 1/1;
+    grid-row: 1/1;
   }
 
 }
@@ -1693,7 +1701,7 @@ flex-direction: column;
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
     max-width: 1000px;
     margin-inline: auto;
-    padding-inline: 50px;
+    padding-inline: 40px;
   }
 
   .slider,
@@ -1855,25 +1863,24 @@ flex-direction: column;
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
   }
-  /*Начало блока side(боковая панель)*/
-  .side-panel {
-    position: relative;
-    width: 130px;
-
-    font-size: 10px;
-  }
-  .side-panel__banner {
-    width: 160px;
-    height: 115px;
-  }
-  .side-panel__banner-subtitle{
-    display: none;
-  }
-  .side-panel__banner-footer{
-    position: absolute;
-    bottom: 0px;
-  }
-  /*Конец блока side(боковая панель)*/
+    /*Начало блока side(боковая панель)*/
+    .side-panel {
+      position: relative;
+      width: 180px;
+      font-size: 10px;
+    }
+    .side-panel__banner {
+      width:100%;
+      height: 128px;
+    }
+    .side-panel__banner-subtitle{
+      display: block;
+    }
+    .side-panel__banner-footer{
+      position: absolute;
+      bottom: 0px;
+    }
+    /*Конец блока side(боковая панель)*/
 
   .courses__lists {
     gap: 10px 10px;
@@ -1882,14 +1889,7 @@ flex-direction: column;
   .FAQ__button-ask {
     background-color: #fff;
   }
-  .footer__body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .footer__section-qualification {
-    grid-column: 1/4;
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -2026,24 +2026,6 @@ flex-direction: column;
   .footer__body {
     display: flex;
   }
-    /*Начало блока side(боковая панель)*/
-    .side-panel {
-      position: relative;
-      width: 220px;
-      font-size: 10px;
-    }
-    .side-panel__banner {
-      width:100%;
-      height: 145px;
-    }
-    .side-panel__banner-subtitle{
-      display: block;
-    }
-    .side-panel__banner-footer{
-      position: absolute;
-      bottom: 0px;
-    }
-    /*Конец блока side(боковая панель)*/
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -2159,7 +2141,7 @@ flex-direction: column;
   .side-panel {
     position: relative;
     width: 220px;
-    font-size:11px;
+
   }
 
   .side-panel__banner {
