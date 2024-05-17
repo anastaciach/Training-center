@@ -1302,6 +1302,14 @@ th:not(:last-child) {
 
 /* Small devices (landscape phones, 576px and up) */
 
+#myCarousel {
+  --f-carousel-slide-height: 60%;
+  --f-carousel-spacing: 10px;
+
+  
+  /* height: 200px; */
+}
+
 @media(max-width:575px){
   .container {
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
