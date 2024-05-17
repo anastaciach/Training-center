@@ -124,6 +124,8 @@
 
   --color-primary-blue: #0074d9;
   --color-secondary: #3f3f3f;
+  --color-background-light:#f9f9f9;
+  --color-background-light-second:#D9D9D9;
   --color-button: #ff7f00;
   --color-footer: #f0f0f0;
   --border-radius: 4px;
@@ -181,7 +183,8 @@
 .FAQ,
 .reviews,
 .form,
-.map {
+.map
+{
   max-width: var(--container-width-small);
 }
 
@@ -1235,7 +1238,67 @@ align-items: center;
 
 /* Конец  стили для страницы education-program-catalog*/
 
+/*Начало  стилей для страницы program.html*/
+/*Начало блока program*/
 
+.program{
+
+}
+.program__title{}
+.program__description-wrapper{
+  display: flex;
+  margin-bottom: 20px;
+}
+.program__description{
+  width: 50%;
+  padding: 0 20px 0 20px;
+}
+.program__button{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  margin-bottom: 40px;
+  background-color: var(--color-button);
+}
+.program__details{
+  border-collapse: collapse;
+  border-bottom: 2px solid var(--color-background-light-second);
+}
+.program__details th, .program__details td{
+  width: 25%;
+  padding-left:10px ;
+  text-align: left;
+}
+th:not(:last-child) {
+  border-right: 2px solid var(--color-background-light-second); 
+}
+.program__detail{}
+.program__detail-label{
+ 
+  color:var(--color-light);
+  background-color: var(--color-primary-blue);
+  font-weight: inherit;
+  font-size: inherit;
+
+}
+.program__detail-value{}
+/*Конец блока program*/
+/*Начало блока application-documents*/
+.application-documents{
+  background-color: var(--color-background-light);
+}
+.application-documents__description{}
+.application-forms__subtext{
+  display:block;
+}
+.application-documents__list{}
+.application-documents__item{}
+.application-documents__link{}
+.application-documents__name{}
+.application-documents__size{}
+/*Начало блока application-documents*/
+/*Конец  стилей для страницы program.html*/
 
 /* Small devices (landscape phones, 576px and up) */
 
