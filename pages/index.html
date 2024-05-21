@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Квалификация</title>
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="header">
@@ -343,7 +343,7 @@
                   <button class="button slider__button">Подробнее</button>
                 </div>
               </div>
-              <div class="slider__item slider__background-image f-carousel__slide">
+              <div class="slider__item slider__background-image-2 f-carousel__slide">
                 <div class="slider__content">
                   <div class="slider__title">
                     Приглашаем на очное обучение по транспортным направлениям!
@@ -731,21 +731,39 @@
                 <li class="side-menu__item">ФИС ФРДО</li>
               </ul>
             </div>
-            <div class="side-panel__banner">
-              <div class="side-panel__banner-title">
-                <h1>Скидка на обучение 15%</h1>
+            <div class="side-panel__banner-list f-carousel"  id="myCarousel_right">
+              <div class=" f-carousel__slide side-panel__banner">
+                <div class="side-panel__banner-title">
+                  <h1>Скидка на обучение 15%</h1>
+                </div>
+                <div class="side-panel__banner-subtitle">
+                  <p>
+                    Короткое описание, если оно неободимоКороткое описание, если
+                    оно
+                  </p>
+                </div>
+                <div class="side-panel__banner-footer">
+                  <p>Акция действует с 15.03.24 по 18.04.24</p>
+                </div>
               </div>
-              <div class="side-panel__banner-subtitle">
-                <p>
-                  Короткое описание, если оно неободимоКороткое описание, если
-                  оно
-                </p>
-              </div>
-              <div class="side-panel__banner-footer">
-                <p>Акция действует с 15.03.24 по 18.04.24</p>
+              <div class="side-panel__banner f-carousel__slide">
+                <div class="side-panel__banner-title">
+                  <h1>Скидка на обучение 15%</h1>
+                </div>
+                <div class="side-panel__banner-subtitle">
+                  <p>
+                    Короткое описание, если оно неободимоКороткое описание, если
+                    оно
+                  </p>
+                </div>
+                <div class="side-panel__banner-footer">
+                  <p>Акция действует с 15.03.24 по 18.04.24</p>
+                </div>
               </div>
             </div>
+            
           </div>
+          
         </aside>
       </div>
     </main>
@@ -823,6 +841,8 @@
         </ul>
       </div>
     </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="slider.js"></script>
   </body>
 </html>

@@ -1,6 +1,12 @@
 const container = document.getElementById("myCarousel");
+const container2 = document.getElementById("myCarousel_right");
+
 // const options = { infinite: false };
 const options = {
+  Autoplay: {
+    timeout: 15000,
+    showProgress:false,
+  },
     breakpoints: {
       "(min-width: 768px)": {
         classNames: {
@@ -19,4 +25,6 @@ const options = {
       },
     },
   };
-new Carousel(container, options);
+new Carousel(container, options,{ Autoplay });
+new Carousel(container2, options,{ Autoplay });
+

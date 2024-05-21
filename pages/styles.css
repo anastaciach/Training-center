@@ -517,6 +517,15 @@ h4 {
   background-clip: border-box;
   /*overflow: hidden;*/
 }
+.slider__background-image-2{
+  max-width: 100%;
+  height: 240px;
+  background: #f332f2;
+  background: url(../assets/images/map.png) no-repeat center
+    center / cover;
+  background-clip: border-box;
+  /*overflow: hidden;*/
+}
 .slider__content {
   margin-left: 20px;
   top: 10%;
@@ -556,13 +565,13 @@ h4 {
   width: 400px;
   margin-bottom: 10px;
 }
-.slider__button {
+/* .slider__button {
   margin-left: 20px;
-}
-.slider-wrapper__dots {
+} */
+/* .slider-wrapper__dots {
   position: relative;
-}
-.slider__dots {
+} */
+/* .slider__dots {
   display: flex;
   column-gap: 10px;
   position: absolute;
@@ -574,7 +583,7 @@ h4 {
   height: 16px;
   border: 1px solid #fff;
   border-radius: 100%;
-}
+} */
 
 /*конец стилей слайдера*/
 /*Начало стилей блока описание*/
@@ -1303,9 +1312,9 @@ th:not(:last-child) {
 /* Small devices (landscape phones, 576px and up) */
 
 #myCarousel {
-  --f-carousel-slide-height: 60%;
+  --f-carousel-slide-height: 10%;
   --f-carousel-spacing: 10px;
-
+  
   
   /* height: 200px; */
 }
@@ -1325,7 +1334,7 @@ th:not(:last-child) {
   .reviews,
   .form,
   .map {
-    max-width: 600px;
+    max-width: 300px;
   }
   body {
     font-size: 12px;
@@ -1430,6 +1439,7 @@ th:not(:last-child) {
   .directions-list {
     gap: 0px 10px; /* расстояние по вертикали row-gap:10px,по горизонтали column-gap:20px*/
     grid-template-columns: repeat(1, 1fr);
+
     /*Конец блока directions*/
   }
   .description__advantages {
@@ -1754,7 +1764,7 @@ flex-direction: column;
 @media (min-width: 768px) {
   .container {
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
-    max-width: 1000px;
+    max-width: 1100px;
     margin-inline: auto;
     padding-inline: 40px;
   }
@@ -1767,7 +1777,7 @@ flex-direction: column;
   .reviews,
   .form,
   .map {
-    max-width: 600px;
+    max-width: 540px;
   }
   body {
     font-size: 12px;
@@ -2218,7 +2228,8 @@ flex-direction: column;
   .container {
     /* max-width:calc(var(--container-width)+var(--container-padding-x)*2);*/
   margin-inline: auto;
-  padding-inline: var(--container-padding-x);
+  /* padding-inline: var(--container-padding-x); */
+  padding-inline:70px;
   }
   .slider,
   .description,
