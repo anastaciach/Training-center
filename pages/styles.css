@@ -2139,10 +2139,32 @@ flex-direction: column;
 } */
 /* НАЧАЛО стили для страницы education-program-catalog*/
 /*Начало блока стилей education-direction*/
-.catalog__button{
-}
 .education-programs__search{
-  width:50%;
+  padding:20px;
+  background-color: #0074d9;
+  border-radius: var(--border-radius);
+}
+.container-programs__search{
+  display: flex;
+  align-items: center;
+  /* width: 80%; */
+}
+.program-search__input{
+  flex: 1;
+  border: 1px solid #c6c5c5; 
+  border-radius: var(--border-radius); 
+  outline: none;
+  background-color:var(--color-background-light);
+  /* width: 600px; */
+  font-size: 12px;
+  padding: 4px;
+
+}
+.program-search__button{
+/* background: var(--color-button); */
+width:125px;
+height: 30px;
+margin-left: 30px;
 }
 .education-programs__list {
   display: grid;
@@ -2261,6 +2283,7 @@ flex-direction: column;
 .course-advantages__item:before {
   content: "";
   display: inline-block;
+  margin-right: 5px;
   height: 25px;
   width: 25px;
   background: url(../assets/icons/check_mark_icon.svg) center no-repeat;
@@ -2268,17 +2291,37 @@ flex-direction: column;
 /**/
 @media(max-width:575px){
  .education-direction{
-    max-width: 300px;
+    max-width: 450px;
+  }
+  .education-programs__list{
+    grid-template-columns: repeat(1, 1fr);
   }
   .education-direction__list-steps {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px 20px;
   }
   .direction-list__item {
-    min-height: 180px;
+    min-height: 100px;
+  }
+  .direction__item-step{
+    font-size: 26px;
+  }
+  .direction__item-title {
+
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .direction__item-description{
+    font-size: 12px;
+    padding: 0 45px 0 45px;
   }
 }
-@media(max-width:768px){}
+@media(max-width:768px){
+  .program__button-more {
+    width: 90px;
+    height: 30px;
+  }
+}
 @media (min-width: 576px) {
   .education-direction{
     max-width: 478px;
