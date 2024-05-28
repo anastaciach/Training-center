@@ -2155,7 +2155,8 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
+  /* width: 400px; */
+  /* white-space: pre-wrap; */
   height: 100;
   border: 1px solid #ccc;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -2194,8 +2195,7 @@ flex-direction: column;
   margin: 10px 0 0 0;
   background-color: var(--color-primary-blue);
 }
-.education-direction__learning-steps {
-}
+
 .education-direction__list-steps {
   display: grid;
   gap: 10px 10px;
@@ -2204,16 +2204,18 @@ flex-direction: column;
 }
 .direction-list__item {
   padding: 10px;
-  width: 240px;
-  min-height: 225px;
+  /* width: 240px; */
+  width:100%;
+  min-height: 230px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #f7f7f7;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: start;
   position: relative;
 }
+
 .direction__item-title {
   font-weight: 600;
   font-size: 16px;
@@ -2229,6 +2231,7 @@ flex-direction: column;
   font-weight: 600;
   font-size: 56px;
   opacity: 0.5;
+  align-self: start;
 }
 /*Конец блока стилей education-direction*/
 /*Начало блока стилей education__docs-confirmation */
@@ -2263,7 +2266,63 @@ flex-direction: column;
   background: url(../assets/icons/check_mark_icon.svg) center no-repeat;
 }
 /**/
+@media(max-width:575px){
+ .education-direction{
+    max-width: 300px;
+  }
+  .education-direction__list-steps {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 20px;
+  }
+  .direction-list__item {
+    min-height: 180px;
+  }
+}
+@media(max-width:768px){}
+@media (min-width: 576px) {
+  .education-direction{
+    max-width: 478px;
+  }
+  .education-direction__list-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
+  }
+  .direction-list__item {
+    min-height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .education-direction{
+    max-width: 500px;
+  }
 
+  
+}
+@media (min-width: 992px) {
+  .education-direction{
+    max-width: 600px;
+  }
+}
+@media ((min-width: 1200px)) {
+  .education-direction{
+    max-width: 1000px;
+  }
+  .education-direction__list-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 10px;
+  }
+  .direction-list__item {
+    min-height: 200px;
+    min-height: 220px;
+  }
+}
+@media (min-width: 1400px) {
+  .education-direction{
+    max-width: 1000px;
+    
+  }
+  
+}
 /* Конец  стили для страницы education-program-catalog*/
 
 
