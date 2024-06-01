@@ -319,15 +319,31 @@
             </div>
           </div>
             
-            <div class="filter__container">
-              <div class="filter__education-type">
-                <div class="filter__title"></div>
-                <ul>
-                  <li>Обучение</li>
-                  <li>Повышение квалификации</li>
-                  <li></li>
-                </ul>
-              </div>
+            <div class="filter__container disable-select">
+              <fieldset class="filter-programs__list filter__education-type">
+                <div class="filter__title">Тип образования</div>
+                <div class="filter-programs__item">
+                  
+                  <label for="1">
+                  <input type="checkbox" id="1" name="educationType[]" value="1" checked />
+                    Обучение</label>
+                </div>
+                <div class="filter-programs__item">
+                  
+                  <label for="2"><input type="checkbox" id="2" name="educationType[]" value="2" checked />
+                    Повышение квалификации</label>
+            </fieldset>
+            <fieldset class="filter-programs__list filter__education-type">
+              <div class="filter__title">Тип образования</div>
+              <label class="filter-programs__item">
+                <input type="checkbox" id="1" name="educationType[]" value="1" checked />
+                <span>Обучение2</span>
+              </label>
+              <label class="filter-programs__item">
+                <input type="checkbox" id="2" name="educationType[]" value="2" checked />
+                <span>Повышение квалификации2</span>
+              </label>
+            </fieldset>
               <div class="filter__time">
                 <div class="filter__title">
                   <ul>
@@ -365,6 +381,19 @@
                   Применить фильтр
                 </button>
               </div>
+            </div>
+            <div class="filter__container disable-select">
+              <fieldset class="filter-programs__list">
+                <div class="filter-programs__item">
+                  <input type="checkbox" id="coding" name="interest" value="coding" checked />
+                  <label for="coding">Coding</label>
+                </div>
+                <div class="filter-programs__item">
+                  <input type="checkbox" id="music" name="interest" value="music" />
+                  <label for="music">Music</label>
+                </div>
+              </fieldset>
+              
             </div>
             <div class="education-programs__list">
               <div class="education-program__item">
@@ -603,7 +632,7 @@
                 <div class="direction-list__item">
                   <span class="direction__item-title">Обучение</span>
                   <span class="direction__item-description"
-                    >Дистанционное — 24/7</span
+                    >Дистанционное — 24/7</span
                   >
                   <span class="direction__item-description">Очное</span>
                   <span class="direction__item-step">02</span>
@@ -917,5 +946,23 @@
         <a href="#" class="footer__policy">Политика конфиденциальности</a>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.filter-programs__item input[type="checkbox"]').forEach(function(checkbox) {
+    function updateItemState() {
+      if (checkbox.checked) {
+        checkbox.closest('.filter-programs__item').classList.add('active');
+      } else {
+        checkbox.closest('.filter-programs__item').classList.remove('active');
+      }
+    }
+
+    // Initialize the state based on the checkbox's initial state
+    updateItemState();
+
+    // Update the state whenever the checkbox changes
+    checkbox.addEventListener('change', updateItemState);
+  });
+});</script>
   </body>
 </html>
