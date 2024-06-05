@@ -2164,7 +2164,10 @@ footer {
 /*Начало стилей блока фильтр программ*/
 .filter__container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap:20px;
+  font-size: inherit;
+
 }
 
 fieldset {
@@ -2176,19 +2179,31 @@ input[type="checkbox"] {
   opacity: 0;
   z-index: -1;
 }
-
+#formAgreement{
+  position: static;
+  opacity: 1;
+  z-index: auto;
+}
+.filter__title{
+  margin-bottom: 10px;
+}
 .filter-programs__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  flex-direction: row;
   gap: 10px;
 }
 
 .filter-programs__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   background-color: #f0f0f0;
-  padding: 8px 12px;
+  padding: 5px 5px;
   border-radius: var(--border-radius, 5px);
   border: 2px solid transparent;
+  line-height: 1.2;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for a nicer effect */
 }
 
@@ -2203,13 +2218,38 @@ input[type="checkbox"] {
   color: white;
 }
 
-label {
+/* label {
   display: block;
   cursor: pointer;
+} */
+
+/* span {
+  display: block;
+} */
+.filter__controls{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap:10px; */
+}
+.filter__reset-button{
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  background:none; 
+  border:none;  
+  white-space: nowrap;
 }
 
-span {
-  display: block;
+.filter__reset-button:hover{
+color:#0268c1;
+}
+.filter__reset-button,.filter__apply_button{
+  width: 170px;
+  height: 35px;
 }
 /*Конец стилей блока фильтр программ*/
 .education-programs__list {
@@ -2408,9 +2448,9 @@ span {
 }
 /* Конец  стили для страницы education-program-catalog*/
 
-/*Начало  стилей для страницы program.html*/
+/* Начало  стилей для страницы program.html*/
 /*Начало блока program*/
-/* .program{
+.program{
 
 }
 .program__title{}
@@ -2423,7 +2463,7 @@ span {
   padding: 0 20px 0 20px;
 }
 .program__button{
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   align-self: end;
@@ -2454,17 +2494,38 @@ th:not(:last-child) {
 .program__detail-value{} */
 /*Конец блока program*/
 /*Начало блока application-documents*/
-/* .application-documents{
+ 
+.application-documents__title{
+  font-weight: 500;
+}
+.application-documents{
   background-color: var(--color-background-light);
 }
 .application-documents__description{}
 .application-forms__subtext{
   display:block;
 }
-.application-documents__list{}
-.application-documents__item{}
-.application-documents__link{}
+.application-forms__subtext>a{
+  border-bottom: var(--color-secondary) 1px solid;
+}
+.application-documents__list{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.application-documents__item{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.application-documents__item>svg{
+  fill: #007bff;
+}
+.application-documents__link{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+}
 .application-documents__name{}
-.application-documents__size{} */
+.application-documents__size{}
 /*Начало блока application-documents*/
-/*Конец  стилей для страницы program.html*/
+/*Конец  стилей для страницы program.html */
