@@ -2332,11 +2332,14 @@ color:#0268c1;
   font-size: 14px;
 }
 .direction__item-step {
-  position: absolute;
   bottom: 20px;
+  font-size: 56px;
+}
+.step-style{
+  position: absolute;
+
   color: #0074d9;
   font-weight: 600;
-  font-size: 56px;
   opacity: 0.5;
   align-self: start;
 }
@@ -2459,8 +2462,8 @@ color:#0268c1;
   margin-bottom: 20px;
 }
 .program__description{
-  width: 50%;
-  padding: 0 20px 0 20px;
+  width: 60%;
+
 }
 .program__button{
   display: flex;
@@ -2495,13 +2498,18 @@ th:not(:last-child) {
 /*Конец блока program*/
 /*Начало блока application-documents*/
  
+
+
 .application-documents__title{
-  font-weight: 500;
+  font-weight: 600;
+}
+.application-documents__description{
+  margin-bottom: 20px;
 }
 .application-documents{
   background-color: var(--color-background-light);
+  padding: 20px;
 }
-.application-documents__description{}
 .application-forms__subtext{
   display:block;
 }
@@ -2514,7 +2522,7 @@ th:not(:last-child) {
 }
 .application-documents__item{
   display: flex;
-  align-items: center;
+  align-items: start;
   gap:10px;
 }
 .application-documents__item>svg{
@@ -2524,8 +2532,61 @@ th:not(:last-child) {
   display: flex;
   flex-direction: column;
 justify-content: center;
+/* font-size: 12px; */
+line-height: 1.2;
 }
 .application-documents__name{}
 .application-documents__size{}
 /*Начало блока application-documents*/
+/**/
+.program-documents__title{}
+.program-documents__description{
+  margin-bottom: 20px;
+}
+.program__description-title{}
+.program__description-text{}
+.program-documents__diploma>img{
+  width: 300px;
+  height: 180px;
+}
+/**/
+/*Начало стилей для блока start-learning*/
+.start-learning{
+  font-weight: 500;
+  /* font-size:14px; */
+}
+.start-learning__lists{
+  display: flex;
+  grid-template-columns: repeat(3,1fr);
+  gap:10px;
+}
+.start-learning__item{
+  display: flex;
+
+  justify-content: center;
+  padding: 15px 15px 40px 15px;
+  background: var(--color-background-light);
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+.start-learning__description{}
+.start-learning__description-number{}
+.start-learning__description-text{}
+.margin-right-x{
+  margin-right: 15px;
+
+}
+.start-learning__description>div{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.start-learning__description span{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.start-learning__step-number{
+  bottom: 20px;
+
+}
+/*Конец стилей для блока start-learning*/
 /*Конец  стилей для страницы program.html */
