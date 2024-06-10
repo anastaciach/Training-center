@@ -247,6 +247,9 @@ h3 {
 h4 {
   font-size: 14px;
 }
+h5{
+  font-size:12px;
+}
 .logo {
   background: url(../assets/svg/лого.svg) center/contain no-repeat;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
@@ -527,11 +530,16 @@ h4 {
   /*overflow: hidden;*/
 }
 .slider__content {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  margin-left: 30px;
   top: 10%;
-  width: 450px;
+  /* width: 450px; */
   height: 200px;
   position: relative;
+  gap: 5px;
 }
 
 .slider__content::before {
@@ -539,35 +547,36 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 95%;
+  width: 60%;
+  height: 100%;
   background-color: rgba(233, 233, 233, 0.9);
   box-sizing: border-box;
 }
 .slider__title {
   position: relative;
   z-index: 1;
-  padding: 15px;
   font-weight: 600;
   font-size: 16px;
   line-height: 127%;
   color: #292929;
-  width: 400px;
+  /* width: 400px; */
+  width: 58%;
 }
 .slider__subtitle {
   position: relative;
   z-index: 1;
-  left: 20px;
   font-weight: 500;
   font-size: 12px;
   color: #000;
   line-height: 150%;
-  width: 400px;
-  margin-bottom: 10px;
+  width: 58%;
+  /* margin-bottom: 10px; */
+  /* padding: 15px; */
 }
-/* .slider__button {
-  margin-left: 20px;
-} */
+.slider__button {
+  /* margin-left: 15px; */
+  width: 140px;
+}
 /* .slider-wrapper__dots {
   position: relative;
 } */
@@ -789,7 +798,7 @@ h4 {
 .FAQ__button-ask,
 .FAQ__button-more {
   width: 250px;
-  height: 49px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -910,9 +919,9 @@ h4 {
   font-weight: 700;
   margin: 0 0 30px 0;
 }
-.form__subtitle {
+/* .form__subtitle {
   font-size: 15px;
-}
+} */
 .form__item {
   display: flex;
   flex-direction: column;
@@ -935,7 +944,8 @@ h4 {
 }
 .form__button {
   text-align: center;
-  width: 100%;
+  width: 220px;
+  height: 35px;
 }
 .form__checkbox {
   font-size: 10px;
@@ -1156,7 +1166,7 @@ footer {
     max-width: 300px;
   }
   body {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 400;
     /* overflow: hidden; */
   }
@@ -1174,11 +1184,11 @@ footer {
     font-size: 14px;
   }
   /*Начало стилей кнопки*/
-  .button {
+  /* .button {
     width: 129px;
     height: 30px;
     font-size: inherit;
-  }
+  } */
   /*Конец стилей кнопки*/
   /*начало стили header*/
   .menu-addit__background {
@@ -1230,6 +1240,18 @@ footer {
     height: 30px;
   }
   /*конец стили header*/
+.slider__content{
+  height:220px;
+  top:4%;
+  margin-left: 15px;
+
+}
+.slider__button{
+  margin-left: 15%;
+}
+  .slider__title, .slider__subtitle,.slider__content::before {
+    width:95%;
+  }
   /*НАЧАЛО блока descriptions*/
   .description__advantages {
     grid-template-columns: repeat(1, 1fr);
@@ -1288,11 +1310,6 @@ footer {
     gap: 30px;
   }
 
-  .FAQ__button-ask {
-    color: #3f3f3f;
-
-    background-color: #fff;
-  }
 
   .reviews__list {
     grid-template-columns: repeat(1, 1fr);
@@ -1301,9 +1318,7 @@ footer {
     gap: 10px 10px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .FAQ__button-ask {
-    background-color: #fff;
-  }
+ 
   .form__body {
     flex-direction: column;
   }
@@ -1379,7 +1394,7 @@ footer {
   .map {
     max-width: 478px;
   }
-  body {
+  /* body {
     font-size: 12px;
     font-weight: 400;
   }
@@ -1395,13 +1410,13 @@ footer {
   }
   h4 {
     font-size: 15px;
-  }
+  } */
   /*Начало стилей кнопки*/
-  .button {
+  /* .button {
     width: 160px;
     height: 30px;
     font-size: 12px;
-  }
+  } */
 
   /*Конец стилей кнопки*/
   /*начало стили header*/
@@ -1450,6 +1465,9 @@ footer {
     height: 25px;
   }
   /*конец стили header*/
+  /* .slider__title,.slider__subtitle{
+    padding: 10px;
+  } */
   /*НАЧАЛО блока descriptions*/
   .description__advantages {
     grid-template-columns: repeat(2, 1fr);
@@ -1509,10 +1527,7 @@ footer {
       1fr
     ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
-  .FAQ__button-ask {
-    color: #3f3f3f;
-    background-color: #fff;
-  }
+
   .FAQ__buttons {
     gap: 50px;
   }
@@ -1523,9 +1538,7 @@ footer {
     gap: 10px 10px;
     grid-template-columns: repeat(2, 1fr);
   }
-  .FAQ__button-ask {
-    background-color: #fff;
-  }
+
   .form__body {
     flex-direction: column;
   }
@@ -1563,7 +1576,7 @@ footer {
   .map {
     max-width: 500px;
   }
-  body {
+  /* body {
     font-size: 13px;
     font-weight: 400;
   }
@@ -1579,13 +1592,13 @@ footer {
   }
   h4 {
     font-size: 16px;
-  }
+  } */
   /*Начало стилей кнопки*/
-  .button {
+  /* .button {
     width: 160px;
     height: 30px;
     font-size: 12px;
-  }
+  } */
   .burger-button {
     display: none;
   }
@@ -1706,10 +1719,7 @@ footer {
       1fr
     ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
-  .FAQ__button-ask {
-    color: #3f3f3f;
-    background-color: #fff;
-  }
+
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1742,9 +1752,7 @@ footer {
     gap: 10px 10px;
     grid-template-columns: repeat(2, 1fr);
   }
-  .FAQ__button-ask {
-    background-color: #fff;
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1768,7 +1776,7 @@ footer {
   .map {
     max-width: 600px;
   }
-  body {
+  /* body {
     font-size: 14px;
   }
   h1 {
@@ -1783,13 +1791,13 @@ footer {
   }
   h4 {
     font-size: 17px;
-  }
+  } */
   /*Начало стилей кнопки*/
-  .button {
+  /* .button {
     width: 180px;
     height: 35px;
     font-size: 12px;
-  }
+  } */
 
   /*Конец стилей кнопки*/
   /*начало стилей header*/
@@ -1870,10 +1878,6 @@ footer {
     gap: 10px 10px;
     grid-template-columns: repeat(2, 1fr);
   }
-  .FAQ__button-ask {
-    color: #3f3f3f;
-    background-color: #fff;
-  }
   .form__body {
     flex-direction: row;
   }
@@ -1915,7 +1919,7 @@ footer {
   .map {
     max-width: 800px;
   }
-  body {
+  /* body {
     font-size: 15px;
   }
   h1 {
@@ -1930,12 +1934,13 @@ footer {
   }
   h4 {
     font-size: 16px;
-  } /*Начало стилей кнопки*/
-  .button {
+  } */
+   /*Начало стилей кнопки*/
+  /* .button {
     width: 200px;
     height: 35px;
     font-size: 14px;
-  }
+  } */
   /*Конец стилей кнопки*/
   /*начало стилей header*/
   .header__menu-contact-list {
@@ -1993,12 +1998,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /*Начало блока FAQ*/
-  .FAQ__button-ask {
-    color: #3f3f3f;
-    background-color: #fff;
-  }
-  /*Конец блока FAQ*/
+
   /*Начало блока reviews*/
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
@@ -2044,7 +2044,7 @@ footer {
   .map {
     max-width: 900px;
   }
-  body {
+  /* body {
     font-size: 16px;
   }
   h1 {
@@ -2059,13 +2059,13 @@ footer {
   }
   h4 {
     font-size: 20px;
-  }
+  } */
   /*Начало стилей кнопки*/
-  .button {
+  /* .button {
     width: 220px;
     height: 35px;
     font-size: 14px;
-  }
+  } */
   /*Конец стилей кнопки*/
   /*начало стилей header*/
   .header__menu-contact-list {
@@ -2112,12 +2112,7 @@ footer {
     gap: 10px 10px;
     grid-template-columns: repeat(3, 1fr);
   }
-  /*Начало блока FAQ*/
-  .FAQ__button-ask {
-    color: #3f3f3f;
-    background-color: #fff;
-  }
-  /*Конец блока FAQ*/
+
   /*Начало блока reviews*/
   .reviews__list {
     grid-template-columns: repeat(3, 1fr);
