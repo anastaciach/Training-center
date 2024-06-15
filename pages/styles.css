@@ -402,7 +402,31 @@ h5{
   height: 40px;
   filter: none;
 }
-
+.dropdown{
+  /* float:left; */
+  position: relative;
+  display: inline-block;
+}
+.dropbtn{}
+.dropdown-content{
+  left:0;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  display: block;
+}
+.dropdown-content a:active {color: var(--color-button);}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 /* .phone__icon::before {
   content: "";
   display: block;
@@ -613,15 +637,16 @@ h5{
 
 .advantages-lists__item {
   position: relative;
-  padding-left: 60px; /* Добавляем отступ слева для иконки */
+  padding-left: 40px; /* Добавляем отступ слева для иконки */
+ 
 }
 
 .advantages-lists__item::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 50px;
-  height: 50px;
+  height: 27px;
+  width: 27px;
   background: url(../assets/icons/plus_icon.svg) no-repeat center;
   background-size: contain;
 }
@@ -665,6 +690,7 @@ h5{
   height: 100%;
   background: var(--color-primary-blue) no-repeat center;
   flex-wrap: wrap;
+  border-radius: var(--border-radius);
   padding: 5px; /* добавляем отступы внутри элемента */
   text-align: start; /* центрируем текст по центру */
   margin-bottom: 10px;
@@ -721,6 +747,7 @@ h5{
   flex-wrap: wrap;
   padding: 5px;
   text-align: center;
+
 }
 .courses__item p {
   width: 100%;
@@ -732,10 +759,15 @@ h5{
 .courses__item-background {
   /*background: var(--color-primary-blue) no-repeat center;*/
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  /* border: 1px solid #ccc; */
+  border: 1px solid #cccccc2b;
   background: #fff;
 }
-
+.courses__item-background:hover,.courses__item-background:active {
+    background: var(--color-primary-blue) ;
+    color:#fff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 /**Конец стилей блока области(направления) обучения*/
 /*Начало стилей блока FAQ*/
 .FAQ__accordion {
@@ -751,16 +783,18 @@ h5{
 .FAQ_item {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
   position: relative;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.2);
   padding: 0px;
 }
 .item__question {
-  flex: 1; /* Занимает оставшееся пространство */
+  flex: 1; 
   width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .item__question > h4 {
   box-sizing: border-box;
@@ -768,26 +802,28 @@ h5{
   padding-right: 50px;
   font-size: inherit;
 }
-.item__answer {
-  display: none;
-}
-.FAQ_item::before {
+
+
+.item__question::before {
   content: "";
   background: url(../assets/icons/question_icon.svg) no-repeat center;
-  height: 50px;
-  width: 50px;
+  height: 27px;
+  width: 27px;
+  padding-right: 40px;
+  
 }
-.FAQ_item::after {
+.item__question::after {
   content: "";
   background: url(../assets/icons/bottom_icon.svg) no-repeat center;
-  height: 50px;
-  width: 50px;
+  height: 27px;
+  width: 27px;
   position: absolute;
-  top: 50%; /* Положение вертикально посередине */
-  right: 0px; /* Увеличиваем расстояние справа */
-  transform: translateY(-50%); /* Центрирование по вертикали */
-
-  color: #000; /* Цвет иконки */
+  top: 50%; 
+  right: 2%; 
+  transform: translateY(-50%); 
+}
+.item__answer{
+  padding:0px 40px 20px 40px;
 }
 .FAQ__buttons {
   display: flex;
@@ -803,6 +839,7 @@ h5{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+
 }
 
 .FAQ__button-ask {
@@ -810,35 +847,72 @@ h5{
   background-color: #fff;
   border: 2px solid orange;
   box-sizing: border-box;
+
 }
 
 .FAQ__button-more {
+}
+.FAQ_item:not(.FAQ_item_show) .item__answer {
+  display: none;
+  
+}
+.FAQ_item_show .item__question::after {
+  transform: rotate(-180deg);
+}
+
+.item__question:hover{
+  /* color: var(--color-primary-blue); */
+}
+
+
+.FAQ__item_hidden .item__question {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 /*Конец стилей блока FAQ*/
 /*Начало стилей блока Отзывы*/
 .reviews {
 }
-
-.reviews__list {
-  display: grid;
+.reviews__list__wrapper {
+  display: flex; 
+  width: 100%;
+}
+ .reviews__list {
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 10px; */
+  display: flex;  
+  flex-direction: row-reverse;
+  height: 205px;
+  /* width: 100%; */
+} 
+.reviews__trigger,.review__item {
+  width:300px;
+  height: 180px;
+}
+#myCarousel__review {
+  --f-carousel-slide-height: 60%;
+  --f-carousel-spacing: 10px;
+  height: 200px;
 }
 .review__item {
   padding: 20px;
   background: #f5f5f5;
   border-radius: 5px;
   position: relative;
+  width:250px;
 }
 .reviews__trigger {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #f5f5f5;
   position: relative;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #f7f7f7;
 }
+
 .review__date {
   position: absolute;
   right: 20px;
@@ -919,9 +993,9 @@ h5{
   font-weight: 700;
   margin: 0 0 30px 0;
 }
-/* .form__subtitle {
+.form__subtitle {
   font-size: 15px;
-} */
+}
 .form__item {
   display: flex;
   flex-direction: column;
@@ -944,8 +1018,7 @@ h5{
 }
 .form__button {
   text-align: center;
-  width: 220px;
-  height: 35px;
+  width: 100%;
 }
 .form__checkbox {
   font-size: 10px;
@@ -956,7 +1029,7 @@ h5{
 .map__body {
   background: url(../assets/images/map.png) center no-repeat;
   width: auto;
-  height: 400px;
+  min-height: 400px;
 }
 /*Конец стилей блока Карта*/
 
@@ -997,9 +1070,17 @@ h5{
   color: white;
   line-height: 1.5;
   font-weight: 400;
+
+}
+.side-banner__wrapper{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  line-height: 1.2;
 }
 .side-panel__banner-title h1 {
-  padding: 10px 5px 5px 5px;
+  /* padding: 10px 5px 5px 5px; */
   font-size: 12px;
   font-weight: 500;
   text-align: center;
@@ -1008,11 +1089,11 @@ h5{
 .side-panel__banner-subtitle p {
   font-weight: 400;
   font-size: 10px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .side-panel__banner-footer {
   margin-top: auto;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 /*Конец стилей блока Боковая панель*/
 
@@ -1261,11 +1342,11 @@ footer {
     font-weight: 600;
     font-size: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 50px;
     height: 50px;
-    /* background-size: contain; */
-  }
+    background-size: contain;
+  } */
 
   .advantages-context {
     max-width: 400px;
@@ -1293,10 +1374,10 @@ footer {
   }
   /*НАЧАЛО блока descriptions*/
 
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 30px;
     height: 30px;
-  }
+  } */
 
   .advantages-context {
     max-width: 400px;
@@ -1309,18 +1390,23 @@ footer {
   .FAQ__buttons {
     gap: 30px;
   }
-
-
-  .reviews__list {
-    grid-template-columns: repeat(1, 1fr);
+  .FAQ__button-ask,
+  .FAQ__button-more {
+    font-size: 12px;
   }
+
+  /* .reviews__list {
+    grid-template-columns: repeat(1, 1fr);
+  } */
   .courses__lists {
     gap: 10px 10px;
     grid-template-columns: repeat(1, 1fr);
   }
- 
+
   .form__body {
     flex-direction: column;
+    justify-content: space-around;
+
   }
   .form__contact-info {
     padding: 25px 30px 10px 23px;
@@ -1427,10 +1513,6 @@ footer {
     gap: 5px;
   }
 
-  .header__menu-button {
-    width: 120px;
-    height: 40px;
-  }
   .header__menu-logo {
     max-width: 400px;
     min-width: 150px;
@@ -1477,11 +1559,11 @@ footer {
     font-weight: 600;
     font-size: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 50px;
     height: 50px;
-    /* background-size: contain; */
-  }
+    background-size: contain;
+  } */
 
   .advantages-context {
     max-width: 400px;
@@ -1508,11 +1590,11 @@ footer {
   }
   /*НАЧАЛО блока descriptions*/
 
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 40px;
     height: 40px;
     background-size: contain;
-  }
+  } */
 
   .advantages-context {
     display: grid;
@@ -1531,9 +1613,9 @@ footer {
   .FAQ__buttons {
     gap: 50px;
   }
-  .reviews__list {
+  /* .reviews__list {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
   .courses__lists {
     gap: 10px 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -1553,6 +1635,9 @@ footer {
   .footer__section-qualification {
     grid-column: 1/4;
     /* grid-row: 1/2; */
+  }
+  .side-banner__wrapper{
+    padding: 5px;
   }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -1613,7 +1698,7 @@ footer {
   }
 
   .header__menu-button {
-    width: 120px;
+    width: 130px;
     height: 40px;
   }
   .header__menu-logo {
@@ -1632,10 +1717,7 @@ footer {
   .header__menu-item .eye-icon {
     font-size: 0; /* Скрываем текст, устанавливая размер шрифта 0 */
   }
-  .header__menu-item,
-  .header__menu-item > a {
-    white-space: nowrap;
-  }
+
   .search__container {
     border: 1px solid #c6c5c5;
 
@@ -1669,11 +1751,11 @@ footer {
     font-weight: 600;
     font-size: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 50px;
     height: 50px;
-    /* background-size: contain; */
-  }
+    background-size: contain;
+  } */
 
   .advantages-context {
     max-width: 400px;
@@ -1700,11 +1782,11 @@ footer {
   }
   /*НАЧАЛО блока descriptions*/
 
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 40px;
     height: 40px;
     background-size: contain;
-  }
+  } */
 
   .advantages-context {
     display: grid;
@@ -1720,14 +1802,15 @@ footer {
     ); /*repeat(auto-fit, minmax(50px, 1fr))*/
   }
 
-  .reviews__list {
+  /* .reviews__list {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
   /*Начало блока side(боковая панель)*/
   .side-panel {
     position: relative;
-    width: 150px;
+    width: 165px;
     font-size: 10px;
+    
   }
   .side-menu__item {
     padding: 1px;
@@ -1807,10 +1890,7 @@ footer {
   .contact-list__item a {
     gap: 5px;
   }
-  .header__menu-button {
-    width: 120px;
-    height: 40px;
-  }
+
 
   .header__menu-addit,
   .header__menu-main {
@@ -1823,10 +1903,7 @@ footer {
   .header__menu-item.eye-icon {
     font-size: 13px;
   }
-  .header__menu-item,
-  .header__menu-item > a {
-    white-space: nowrap;
-  }
+
   .search__container {
     border: 1px solid #c6c5c5;
   }
@@ -1855,11 +1932,11 @@ footer {
     font-weight: 600;
     font-size: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 40px;
     height: 40px;
-    /* background-size: contain; */
-  }
+    background-size: contain;
+  } */
 
   .advantages-context {
     max-width: 400px;
@@ -1949,10 +2026,7 @@ footer {
   .contact-list__item a {
     gap: 5px;
   }
-  .header__menu-button {
-    width: 142px;
-    height: 40px;
-  }
+
   .header__menu-addit,
   .header__menu-info,
   .header__menu-main {
@@ -1961,10 +2035,6 @@ footer {
   }
   .header__menu-item.eye-icon {
     font-size: 13px; /* Скрываем текст, устанавливая размер шрифта 0 */
-  }
-  .header__menu-item,
-  .header__menu-item > a {
-    white-space: nowrap;
   }
   .search__input {
     max-width: 400px;
@@ -1977,10 +2047,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 40px;
     height: 40px;
-  }
+  } */
   .advantages-context {
     max-width: 400px;
   }
@@ -2000,9 +2070,10 @@ footer {
 
 
   /*Начало блока reviews*/
-  .reviews__list {
+  /* .reviews__list {
     grid-template-columns: repeat(3, 1fr);
-  } /*Конец блока reviews*/
+  }  */
+  /*Конец блока reviews*/
   /*Начало блока side(боковая панель)*/
   .side-panel {
     position: relative;
@@ -2074,10 +2145,6 @@ footer {
   .contact-list__item a {
     gap: 5px;
   }
-  .header__menu-button {
-    width: 142px;
-    height: 40px;
-  }
 
   .header__menu-addit,
   .header__menu-info,
@@ -2088,10 +2155,7 @@ footer {
   .header__menu-item.eye-icon {
     font-size: 15px;
   }
-  .header__menu-item,
-  .header__menu-item > a {
-    white-space: nowrap;
-  }
+
   /*конец стилей header*/
 
   /*НАЧАЛО блока descriptions*/
@@ -2099,10 +2163,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .advantages-lists__item::before {
+  /* .advantages-lists__item::before {
     width: 40px;
     height: 40px;
-  }
+  } */
   .advantages-context {
     max-width: 400px;
   }
@@ -2114,9 +2178,10 @@ footer {
   }
 
   /*Начало блока reviews*/
-  .reviews__list {
+  /* .reviews__list {
     grid-template-columns: repeat(3, 1fr);
-  } /*Конец блока reviews*/
+  }  */
+  /*Конец блока reviews*/
 }
 /* @media(hover:hover){
   button:hover, .burger-button:hover{

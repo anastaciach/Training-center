@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //Конец скрипта для чекбокса
 const container = document.getElementById("myCarousel");
 const container2 = document.getElementById("myCarousel_right");
-
+const container_review = document.getElementById("myCarousel__review");
 // const options = { infinite: false };
 const options = {
   Autoplay: {
@@ -47,6 +47,40 @@ const options = {
   };
 new Carousel(container, options,{ Autoplay });
 new Carousel(container2, options,{ Autoplay });
+new Carousel(container_review, options,{ Autoplay });
+/*FAQ аккордион начало*/
+class ItcAccordion {
+  constructor(target, config) {
+  this._el = typeof target === 'string' ? document.querySelector(target) : target;
+  const defaultConfig = {
+  alwaysOpen: true
+  };
+  this._config = Object.assign(defaultConfig, config);
+  this.addEventListener();
+  }
+  addEventListener() {
+  this._el.addEventListener('click', (e) => {
+  const elHeader = e.target.closest('.item__question');
+  if (!elHeader) {
+    return;
+  }
+  if (!this._config.alwaysOpen) {
+    const elOpenItem = this._el.querySelector('.FAQ_item_show');
+    if (elOpenItem) {
+      elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('FAQ_item_show') : null;
+    }
+  }
+  elHeader.parentElement.classList.toggle('FAQ_item_show');
+  });
+  }
+  }
+  
+  // new ItcAccordion('#accordion-1');
+  new ItcAccordion('#accordion-1', {
+  alwaysOpen: false
+  });
+  /* AQ аккордион конец*/
+
 /*Начало MODx pdoResources Ajax Filter */
 $(function() {
   // MODx pdoResources Ajax Filter
@@ -162,4 +196,5 @@ $(function() {
   });
 });
 /*Конец MODx pdoResources Ajax Filter */
+
 
